@@ -1,0 +1,5 @@
+.CoursCard-block {
+    background-color: #252B42;
+    padding: 20px; /* Внутренний отступ для блока с карточками */
+    /*margin-top: 20px; /* Отступ сверху */
+  }

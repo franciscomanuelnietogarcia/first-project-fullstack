@@ -1,0 +1,43 @@
+footer {
+    background-color: #163c4d;
+    color: #fff;
+    /*width: 100%; /* Ширина на всю ширину экрана */
+    /*position: absolute; /* Позиционирование абсолютное */
+    /*bottom: 0; /* Фиксация снизу */
+  }
+  .container-grid {
+    display: flex; 
+    justify-content: space-between;
+  }
+
+  footer p {
+    font-size: 14px;
+    font-weight: 200;
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+  footer h2 {
+    margin-bottom: 20px;
+  }
+  footer li {
+    margin-bottom: 10px;
+    opacity: 1;
+    list-style: none;
+  }
+  
+  #textfooter {
+    color: white;
+    opacity: 200%;
+    width: 80%;
+    margin-left: 4%;
+  }
+  
+  .boxtwo {
+    flex: 1;
+    margin-top: 0;
+  }
+  
+  #logowhite {
+    margin-top: 15%;
+    /* width: 80%; */
+  }
