@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { NavLink } from 'react-router-dom';
+
 import "./Header.css";
 import logo from "../../assets/images/logo.png";
 
@@ -26,7 +28,7 @@ const Header = () => {
       }}
     >
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand as={NavLink} to="/">
           <img
             src={logo}
             alt="Logo"
@@ -37,10 +39,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto" navbarScroll>
-            <Nav.Link href="#action1">Inicio</Nav.Link>
+            <Nav.Link as={NavLink} to="/">Inicio</Nav.Link>
             <Nav.Link href="#action2">Courses</Nav.Link>
-            <Nav.Link href="#action3">Sobre nosotros</Nav.Link>
-            <Nav.Link href="#action4">Contactos</Nav.Link>
+            <Nav.Link as={NavLink} to="/Contactos">Sobre nosotros</Nav.Link>
           </Nav>
           <div className="d-flex align-items-center">
             <Form className="d-flex me-5">
@@ -54,10 +55,10 @@ const Header = () => {
                 Búsqueda
               </Button>
             </Form>
-            <Nav.Link href="#action1" className="text-white">
+            <Nav.Link as={NavLink} to="/Entrar" variant="outline-success" className="text-white">
               Entrar
             </Nav.Link>
-            <Button variant="primary" className="ms-3">
+            <Button as={NavLink} to="/Registrar" variant="primary" className="ms-3">
               Registrárme
             </Button>
           </div>

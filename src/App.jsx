@@ -1,15 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Home from './components/MainPage/Home'
-
-
+import "./App.css"
+import Home from "./components/MainPage/Home";
+import Contactos from "./pages/Contactos";
+import Entrar from "./pages/Entrar";
+import Registrar from "./pages/Registrar"
 
 const App = () => {
   return (
     <>
-      <Home />
+      <Router>
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Contactos" element={<Contactos />} />
+        <Route path="/Entrar" element={<Entrar />} />
+        <Route path="/Registrar" element={<Registrar />} />
+        </Routes>
+      </Router>
     </>
   );
 };
