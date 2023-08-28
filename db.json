@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "RmYL-0i",
+      "name": "VIACHESLAV",
+      "email": "slavafit@mail.ru",
+      "password": "wwww",
+      "role": "2"
+    },
+    {
+      "id": "1K1HIL0",
+      "name": "Name",
+      "email": "Fitlin",
+      "password": "122",
+      "role": "1"
+    },
+    {
+      "id": "RwTKplf",
+      "name": "123www",
+      "email": "445rtt",
+      "password": "123we",
+      "role": "1ee"
+    },
+    {
+      "nombre": null,
+      "email": null,
+      "password": null,
+      "id": "UZs5BWP"
+    }
+  ]
+}

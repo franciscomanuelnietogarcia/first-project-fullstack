@@ -5,10 +5,13 @@ import Home from "./components/MainPage/Home";
 import Contactos from "./pages/Contactos";
 import Entrar from "./pages/Entrar";
 import Registrar from "./pages/Registrar"
+import { AppAddUser } from "./components/CRUD/AppAddUser";
+
 
 const App = () => {
   return (
     <>
+        {/* <AppAddUser /> */}
       <Router>
         <Routes>
         <Route path="/" element={<Home />} />

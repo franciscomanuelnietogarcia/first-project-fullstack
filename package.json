@@ -7,11 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json": "json-server --w db.json -p 5000"
   },
   "dependencies": {
     "bootstrap": "^5.3.1",
+    "ra-data-simple-rest": "^4.13.2",
     "react": "^18.0.0",
+    "react-admin": "^4.13.2",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.0.0",
     "react-router": "^6.15.0",
