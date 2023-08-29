@@ -1,10 +1,36 @@
-import React from 'react';
+import React , { useState, useEffect } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Coursedata from "../components/CoursCard/Coursedata";
 import { Card, Button, Col, Row } from "react-bootstrap";
+import axios from 'axios';
 
 
 function CoursList() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [Coursedata, setCoursedata] = useState([]);
+
+  useEffect(() => {
+    // Fetch course data from API
+    axios.get('http://localhost:5000/coursedata')
+      .then(response => {
+        setCoursedata(response.data);
+        setLoading(false);
+      })
+      .catch(error => {
+        setError(error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  
   return (
     <Row xs={1} md={2} lg={5} className="g-4">
       {Coursedata.map((value, index) => (
