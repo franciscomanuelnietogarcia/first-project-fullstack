@@ -1,9 +1,6 @@
 footer {
-    background-color: #163c4d;
+    background-color: #3a4264;
     color: #fff;
-    /*width: 100%; /* Ширина на всю ширину экрана */
-    /*position: absolute; /* Позиционирование абсолютное */
-    /*bottom: 0; /* Фиксация снизу */
   }
   .container-grid {
     display: flex; 
@@ -35,9 +32,4 @@ footer {
   .boxtwo {
     flex: 1;
     margin-top: 0;
-  }
-  
-  #logowhite {
-    margin-top: 15%;
-    /* width: 80%; */
   }

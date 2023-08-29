@@ -1,16 +1,20 @@
-import React from "react"
-import "./footer.css"
+import React from "react";
+import { Container } from "react-bootstrap";
+
+import "./footer.css";
 
 const Footer = () => {
   return (
-    <>
+    <Container>
       <footer>
-        <div className='container-grid'>
-          <div className='boxone'>
-            <p id="textfooter">Lorem ipsum dolor Quisquam culpa, deleniti neque eius </p>
+        <div className="container-grid">
+          <div className="boxone">
+            <p id="textfooter">
+              Lorem ipsum dolor Quisquam culpa, deleniti neque eius{" "}
+            </p>
           </div>
 
-          <div className='boxtwo'>
+          <div className="boxtwo">
             <h2>Sobre Nosotros</h2>
             <ul>
               <li>Trabaja con nosotros</li>
@@ -18,14 +22,14 @@ const Footer = () => {
               <li>Política de Privacidad</li>
             </ul>
           </div>
-          <div className='boxtwo'>
+          <div className="boxtwo">
             <h2>Cliente</h2>
             <ul>
               <li>Como Comprar </li>
               <li>Devoluciones & Reembolso</li>
             </ul>
           </div>
-          <div className='boxtwo'>
+          <div className="boxtwo">
             <h2>Contáctanos</h2>
             <ul>
               <li>C/ de los Junior Fullstack, Mérida, 06800, España </li>
@@ -35,8 +39,8 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
-  )
-}
+    </Container>
+  );
+};
 
-export default Footer
+export default Footer;

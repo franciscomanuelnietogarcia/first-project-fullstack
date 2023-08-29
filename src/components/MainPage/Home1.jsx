@@ -7,7 +7,7 @@ import background from "../../assets/images/main-pic.png";
 
 const Home = () => {
   return (
-    <>
+    <Container>
       <section>
         <Header />
         <div className="position-relative">
@@ -47,7 +47,7 @@ const Home = () => {
         </Container>
         <Footer />
       </section>
-    </>
+      </Container>
   );
 };
 
