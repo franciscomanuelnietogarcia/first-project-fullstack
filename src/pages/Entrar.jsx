@@ -1,37 +1,55 @@
-import React from "react";
-import { useState } from "react";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form"
+import React, { useState } from "react";
+import { Form, Button, Col, Modal } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import logo from "../assets/images/logo.png";
 import Header from "../components/Header/Header";
 import "./Registrar.css";
-import logo from "../assets/images/logo.png";
 
 
 const Entrar = () => {
   const [validated, setValidated] = useState(false);
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+  const [loginError, setLoginError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setLoginData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
     const form = event.currentTarget;
+    event.preventDefault();
+
     if (form.checkValidity() === false) {
-      event.preventDefault();
       event.stopPropagation();
-    }
-    else {
-      event.preventDefault();
+    } else {
+      try {
+        const response = await axios.get("http://localhost:5000/users");
+        const users = response.data;
+        const user = users.find(
+          (user) =>
+            user.email === loginData.email && user.password === loginData.password
+        );
 
-      // Получаем значение введенного email и пароля
-      const email = form.elements["formBasicEmail"].value;
-      const password = form.elements["formBasicPassword"].value;
-
-      // Проверяем, если введенные данные соответствуют желаемым
-      if (email === "slavafit@mail.ru" && password === "123") {
-        // Перенаправляем на AdminPanel
-        navigate("/AdminPanel");
-      } else {
-        console.log("Detalles de acceso incorrectos");
+        if (user) {
+          if (user.role === "Admin") {
+            navigate("/AdminPanel");
+          } else {
+            setLoginError("Acceso no autorizado");
+          }
+        } else {
+          setLoginError("Detalles de acceso incorrectos");
+        }
+      } catch (error) {
+        console.error("Error fetching users:", error);
       }
     }
 
@@ -52,14 +70,26 @@ const Entrar = () => {
       />
           <Form.Group as={Col} className="mb-3" controlId="formBasicEmail">
             <Form.Label className="fs-4">Email</Form.Label>
-            <Form.Control required type="email" placeholder="Ingresa email" defaultValue=""/>
+            <Form.Control 
+            required type="email" 
+            placeholder="Ingresa email" 
+            name="email"
+            value={loginData.email}
+            onChange={handleChange}/>
             <Form.Text className="text-muted">
               No garantizamos que su dirección de correo electrónico sea segura.
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label className="fs-4">Contraseña</Form.Label>
-            <Form.Control required type="password" placeholder="Ingresa contraseña" defaultValue=""/>
+            <Form.Control 
+            required type="password" 
+            placeholder="Ingresa contraseña" 
+            name="password"
+            value={loginData.password}
+            onChange={handleChange}
+            />
+            {loginError && <div className="text-danger">{loginError}</div>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Acuérdate de mí" />
@@ -69,6 +99,19 @@ const Entrar = () => {
           </Button>
           <p className="mt-5 mb-3 text-center text-muted"> CoursDev © 2023</p>
         </Form>
+        <Modal show={loginError !== ""} onHide={() => setLoginError("")}>
+          <Modal.Header closeButton>
+            <Modal.Title>Error de acceso</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p className="text-danger">{loginError}</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={() => setLoginError("")}>
+              Cerrar
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </section>
   );

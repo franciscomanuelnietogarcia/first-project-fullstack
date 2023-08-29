@@ -5,6 +5,7 @@ import BasicCard from "../Cards/Card";
 import CoursCard from "../CoursCard/CoursCard";
 import Footer from "../Footer/Footer";
 import background from "../../assets/images/main-pic.png";
+import TopButton from "../TopButton/TopButton"
 
 const Home = () => {
   return (
@@ -57,6 +58,7 @@ const Home = () => {
         </Container>
         <Footer />
       </section>
+      <TopButton />
     </section>
   );
 };

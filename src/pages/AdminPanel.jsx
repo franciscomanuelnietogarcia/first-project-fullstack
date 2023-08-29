@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Container, Card,  Row,  Col, ListGroup, Button, Modal, Form, } from "react-bootstrap";
+import { Container, Card,  Row,  Col, ListGroup, Button, Modal, Form, Table} from "react-bootstrap";
 import axios from "axios";
 import "./AdminPanel.css";
+import TablaUsers from "./TablaUsers";
+import TopButton from "../components/TopButton/TopButton"
 
 
 function CoursList() {
@@ -130,6 +132,8 @@ function CoursList() {
 
   return (
     <div>
+      <Container>
+      <h1>Courses gestión</h1>
       <Button
         className="mt-4 text-center mx-auto d-block"
         variant="primary"
@@ -137,7 +141,6 @@ function CoursList() {
       >
         Añadir nuevo courso
       </Button>
-      <Container>
       <Row className="d-flex justify-content-center">
         {Coursedata.map((value, index) => (
           <Col key={index} xs={12} sm={6} md={4} lg={3} className="mt-3">
@@ -155,13 +158,13 @@ function CoursList() {
                   variant="warning" className="me-5"
                   onClick={() => handleEditCourse(index)}
                 >
-                  Edit
+                  Modificar
                 </Button>
                 <Button
                   variant="danger"
                   onClick={() => handleDeleteConfirmationShow(index)}
                 >
-                  Delete
+                  Borrar
                 </Button>
               </Card.Body>
             </Card>
@@ -296,6 +299,8 @@ function CoursList() {
           </Button>
         </Modal.Footer>
       </Modal>
+      <TablaUsers />
+      <TopButton />
     </div>
   );
 }

@@ -41,12 +41,12 @@ const Header = () => {
             <Form className="d-flex me-5">
               <Form.Control
                 type="search"
-                placeholder="Search"
+                placeholder="Búsqueda"
                 className="me-2" // Отступ справа
                 aria-label="Buscar"
               />
               <Button variant="outline-success" className="text-white">
-                Búsqueda
+                Buscar
               </Button>
             </Form>
             <Nav.Link
