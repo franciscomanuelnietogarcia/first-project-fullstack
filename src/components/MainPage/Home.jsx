@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <Card className="bg-dark text-white" >
-        <Card.Img src={background} alt="main-pic" style={{ objectFit: 'cover', maxHeight: 'calc(100vh)' }}/>
+        <Card.Img src={background} alt="main-pic" style={{ objectFit: 'cover', maxHeight: '100vh' }}/>
         <Card.ImgOverlay >
           <Card.Title
             className="ms-5"

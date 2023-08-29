@@ -2,30 +2,69 @@
   "users": [
     {
       "id": "RmYL-0i",
-      "name": "VIACHESLAV",
+      "name": "Admin",
       "email": "slavafit@mail.ru",
-      "password": "wwww",
-      "role": "2"
+      "password": "123",
+      "role": "Admin"
     },
     {
       "id": "1K1HIL0",
-      "name": "Name",
-      "email": "Fitlin",
+      "name": "User",
+      "email": "Fitlin@gmail.com",
       "password": "122",
-      "role": "1"
+      "role": "User"
     },
     {
-      "id": "RwTKplf",
-      "name": "123www",
-      "email": "445rtt",
-      "password": "123we",
-      "role": "1ee"
+      "id": "V5tVSF6",
+      "nombre": "Viacheslav",
+      "email": "slavfit@gmail.com",
+      "password": "123",
+      "role": "User"
     },
     {
-      "nombre": null,
-      "email": null,
-      "password": null,
-      "id": "UZs5BWP"
+      "id": "oLWwBgK",
+      "nombre": "Viacheslav",
+      "email": "slavfit@gmail.com",
+      "password": "111",
+      "role": "User"
+    }
+  ],
+  "course": [
+    {
+      "id": 1,
+      "title": "HTML, CSS desde cero",
+      "desc": "lorem",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof1_vpyjmj.jpg"
+    },
+    {
+      "id": 2,
+      "title": "JavaScript desde cero",
+      "desc": "lorem",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof5_skji9z.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Qué es React?",
+      "desc": "lorem",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof6_cfimkt.jpg"
+    },
+    {
+      "id": 4,
+      "title": "C# ",
+      "desc": "Lorem",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof2_aijttj.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Java",
+      "desc": "lorem",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof3_vwpigo.jpg"
+    },
+    {
+      "id": 6,
+      "title": ".Net",
+      "desc": "lorem",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg"
     }
   ]
 }

@@ -16,7 +16,6 @@ import {
 const Header = () => {
   return (
     <Navbar
-      fixed="top"
       expand="lg"
       className="bg-transparent navbar-dark"
       style={{
