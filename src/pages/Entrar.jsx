@@ -12,15 +12,18 @@ const Entrar = () => {
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
+    rememberMe: false,
   });
   const [loginError, setLoginError] = useState("");
   const navigate = useNavigate();
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value, type, checked } = event.target;
+    const newValue = type === "checkbox" ? checked : value;
+
     setLoginData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: newValue,
     }));
   };
 
@@ -31,6 +34,16 @@ const Entrar = () => {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else {
+      if (loginData.rememberMe) {
+        // Сохраняем данные в localStorage
+        localStorage.setItem("rememberedEmail", loginData.email);
+        localStorage.setItem("rememberedPassword", loginData.password);
+      }
+      else {
+        // Удаляем сохраненное значение пароля из localStorage
+        localStorage.removeItem("rememberedEmail");
+        localStorage.removeItem("rememberedPassword");
+      }
       try {
         const response = await axios.get("http://localhost:5000/users");
         const users = response.data;
@@ -92,7 +105,13 @@ const Entrar = () => {
             {loginError && <div className="text-danger">{loginError}</div>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Acuérdate de mí" />
+          <Form.Check
+          type="checkbox"
+          label="Acuérdate de mí"
+          name="rememberMe"
+          checked={loginData.rememberMe}
+          onChange={handleChange}
+        />
           </Form.Group>
           <Button variant="primary" type="submit" className="text-center mx-auto d-block">
             Entrar

@@ -4,7 +4,7 @@ import axios from "axios";
 import "./AdminPanel.css";
 import TablaUsers from "./TablaUsers";
 import TopButton from "../components/TopButton/TopButton"
-
+import Header from "../components/Header/Header"
 
 function CoursList() {
 
@@ -15,8 +15,11 @@ function CoursList() {
   //модальное окно добавления
   const [showAddModal, setShowAddModal] = useState(false);
   const [newCourse, setNewCourse] = useState({
+    id:"",
     cover: "",
     title: "",
+    price: "",
+    time: "",
     desc: "",
   });
 //модальное окно редактирования
@@ -25,6 +28,8 @@ function CoursList() {
   const [editedCourse, setEditedCourse] = useState({
     cover: "",
     title: "",
+    price: "",
+    time: "",
     desc: "",
   });
   const handleEditCourse = (index) => {
@@ -38,6 +43,8 @@ function CoursList() {
     setEditedCourse({
       cover: "",
       title: "",
+      price: "",
+      time: "",
       desc: "",
     });
   };
@@ -83,7 +90,7 @@ function CoursList() {
       const response = await axios.post("http://localhost:5000/course", newCourse );
       const addedCourse = response.data;
       setCoursedata([...Coursedata, addedCourse]);
-      setNewCourse({ id, title: "", desc: "", cover: "" });
+      setNewCourse({ id, title: "", desc: "", price: "", time: "", cover: "" });
       setShowAddModal(false);
     } catch (error) {
       console.error("Error adding course:", error);
@@ -133,7 +140,8 @@ function CoursList() {
   return (
     <div>
       <Container>
-      <h1>Courses gestión</h1>
+        <Header />
+      <h1>Gestión de courses</h1>
       <Button
         className="mt-4 text-center mx-auto d-block"
         variant="primary"
@@ -151,7 +159,8 @@ function CoursList() {
                 <Card.Text>{value.desc}</Card.Text>
               </Card.Body>
               <ListGroup className="list-group-flush">
-                {/* <ListGroup.Item>Cras justo odio</ListGroup.Item> */}
+                <ListGroup.Item>El precio: {value.price} €</ListGroup.Item>
+                <ListGroup.Item>Duración: {value.time} horas</ListGroup.Item>
               </ListGroup>
               <Card.Body className="d-flex justify-content-between">
                 <Button
@@ -203,6 +212,30 @@ function CoursList() {
                   setNewCourse({ ...newCourse, desc: e.target.value })
                 }
               />
+              </Form.Group>
+            <Form.Group controlId="price">
+              <Form.Label>Precio</Form.Label>
+              <Form.Control
+                type="text"
+                rows={3}
+                placeholder="Precio"
+                value={newCourse.price}
+                onChange={(e) =>
+                  setNewCourse({ ...newCourse, price: e.target.value })
+                }
+              />
+              </Form.Group>
+              <Form.Group controlId="time">
+              <Form.Label>Duración</Form.Label>
+              <Form.Control
+                type="text"
+                rows={3}
+                placeholder="Duración:"
+                value={newCourse.time}
+                onChange={(e) =>
+                  setNewCourse({ ...newCourse, time: e.target.value })
+                }
+              />
             </Form.Group>
             <Form.Group controlId="cover">
               <Form.Label>URL</Form.Label>
@@ -235,11 +268,11 @@ function CoursList() {
         </Modal.Header>
         <Modal.Body>
           <Form>
-          <Form.Group controlId="title">
+          <Form.Group controlId="Introduce el título">
               <Form.Label>Title</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter title"
+                placeholder="Introduce el título"
                 value={editedCourse.title}
                 onChange={(e) =>
                   setEditedCourse({ ...editedCourse, title: e.target.value })
@@ -251,10 +284,34 @@ function CoursList() {
               <Form.Control
                 as="textarea"
                 rows={3}
-                placeholder="Enter descripcion"
+                placeholder="Introduce el descripción"
                 value={editedCourse.desc}
                 onChange={(e) =>
                   setEditedCourse({ ...editedCourse, desc: e.target.value })
+                }
+              />
+            </Form.Group>
+            <Form.Group controlId="price">
+              <Form.Label>Precio</Form.Label>
+              <Form.Control
+                type="text"
+                rows={3}
+                placeholder="Precio en euros:"
+                value={editedCourse.price}
+                onChange={(e) =>
+                  setEditedCourse({ ...editedCourse, price: e.target.value })
+                }
+              />
+            </Form.Group>
+            <Form.Group controlId="time">
+              <Form.Label>Ducarión</Form.Label>
+              <Form.Control
+                type="text"
+                rows={3}
+                placeholder="Ducarión en horas:"
+                value={editedCourse.time}
+                onChange={(e) =>
+                  setEditedCourse({ ...editedCourse, time: e.target.value })
                 }
               />
             </Form.Group>
@@ -262,7 +319,7 @@ function CoursList() {
               <Form.Label>URL</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter cover URL"
+                placeholder="Introduce URL del image"
                 value={editedCourse.cover}
                 onChange={(e) =>
                   setEditedCourse({ ...editedCourse, cover: e.target.value })
@@ -292,7 +349,7 @@ function CoursList() {
         <Modal.Body>¿Estás seguro de que deseas eliminar este curso?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleDeleteConfirmationClose}>
-            Cancel
+            Cancelación
           </Button>
           <Button variant="danger" onClick={handleDeleteCourseConfirmed}>
             Hazlo
