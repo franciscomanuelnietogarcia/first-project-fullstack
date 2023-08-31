@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import { Container, Card,  Row,  Col, ListGroup, Button, Modal, Form, Table} from "react-bootstrap";
 import axios from "axios";
 import "./AdminPanel.css";
-import TablaUsers from "./TablaUsers";
+import TablaUsers from "../components/Tables/TablaUsers";
 import TopButton from "../components/TopButton/TopButton"
 import Header from "../components/Header/Header"
 
+import DeleteModal from "../components/Modales/DeleteModal"
+
 function CoursList() {
 
-  // const fakeAPI = "http://localhost:5000/course";
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [Coursedata, setCoursedata] = useState([]);
-  //модальное окно добавления
+  //модальное окно добавления -ventana modal añadir
   const [showAddModal, setShowAddModal] = useState(false);
   const [newCourse, setNewCourse] = useState({
     id:"",
@@ -22,7 +23,7 @@ function CoursList() {
     time: "",
     desc: "",
   });
-//модальное окно редактирования
+//модальное окно редактирования -ventana modal modificar
   const [showEditModal, setShowEditModal] = useState(false);
   const [editCourseIndex, setEditCourseIndex] = useState(null);
   const [editedCourse, setEditedCourse] = useState({
@@ -32,11 +33,13 @@ function CoursList() {
     time: "",
     desc: "",
   });
+
   const handleEditCourse = (index) => {
     setEditCourseIndex(index);
     setEditedCourse(Coursedata[index]);
     setShowEditModal(true);
   };
+
   const handleEditModalClose = () => {
     setShowEditModal(false);
     setEditCourseIndex(null);
@@ -48,6 +51,7 @@ function CoursList() {
       desc: "",
     });
   };
+
   const handleSaveEditedCourse = async () => {
     try {
       const courseIdToEdit = Coursedata[editCourseIndex].id; // Assuming each course has an "id" field
@@ -61,7 +65,7 @@ function CoursList() {
     }
   };
 
-//отображение карточек курсов
+//отображение карточек курсов - mostrar tarjetitos
   useEffect(() => {
     axios
       .get("http://localhost:5000/course")
@@ -74,7 +78,7 @@ function CoursList() {
         setLoading(false);
       });
   }, []);
-//открытие
+//открытие - 
   const handleAddModalShow = () => {
     setShowAddModal(true);
   };
@@ -182,7 +186,7 @@ function CoursList() {
       </Row>
       </Container>
 
-{/* bloque modal ventanas */}
+        {/* bloque modal ventanas */}
           {/* modal añadir */}
       <Modal show={showAddModal} onHide={handleAddModalClose}>
         <Modal.Header closeButton>
@@ -252,7 +256,7 @@ function CoursList() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleAddModalClose}>
-            Cancelación
+            Cancelar
           </Button>
           <Button variant="primary" onClick={handleAddCourse}>
             Añadir Course
@@ -349,7 +353,7 @@ function CoursList() {
         <Modal.Body>¿Estás seguro de que deseas eliminar este curso?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleDeleteConfirmationClose}>
-            Cancelación
+            Cancelar
           </Button>
           <Button variant="danger" onClick={handleDeleteCourseConfirmed}>
             Hazlo

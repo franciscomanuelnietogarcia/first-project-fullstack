@@ -9,7 +9,7 @@ function Registrar() {
   const [validated, setValidated] = useState(false);
   const [formData, setFormData] = useState({
     id: "",
-    nombre: "",
+    name: "",
     email: "",
     password: "",
     role: "User",
@@ -77,7 +77,7 @@ function Registrar() {
               <Form.Control
                 required
                 type="text"
-                name="nombre"
+                name="name"
                 value={formData.nombre}
                 onChange={handleChange}
                 placeholder="Nombre"

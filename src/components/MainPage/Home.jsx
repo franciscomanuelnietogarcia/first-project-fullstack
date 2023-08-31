@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import Header from "../Header/Header";
 import BasicCard from "../Cards/Card";
 import CoursCard from "../CoursCard/CoursCard";
@@ -11,6 +11,7 @@ const Home = () => {
   return (
     <section>
       <Container>
+        <Header />
         <Card className="bg-dark text-white">
           <Card.Img
             src={background}
@@ -30,18 +31,19 @@ const Home = () => {
               Donde estés <br />
               Cómodo
             </Card.Title>
-            <Card.Text>
-              <h4 className="mt-5 text-warning ms-5">
-                ¿Quiere desarrollar su carrera en TI, <br />
-                aumentar sus ingresos o incluso cambiar de ubicación?
-              </h4>
+            <Card.Text className="mt-5 text-warning ms-5">
+                <p className="fs-4">
+                  ¿Quiere desarrollar su carrera en TI, <br />
+                  aumentar sus ingresos o incluso cambiar de ubicación?
+                </p>
             </Card.Text>
             {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
+            {/* <Button variant="primary">Leer más</Button> */}
           </Card.ImgOverlay>
         </Card>
       </Container>
       <section>
-        <Header />
+        
         <Container>
           <Row>
             <Col>

@@ -1,9 +1,20 @@
-import React from "react";
-import { Card, Button, Container, Row, Col } from "react-bootstrap";
-import Sdata from "./Sdata";
+import React, { useState, useEffect } from "react";
+import { Card, Container, Row, Col } from "react-bootstrap";
+import { fetchAdvantages } from "../../Service/Api";
+
 import "./Card.css";
 
 const BasicCard = () => {
+  const [ventajas, setData] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const advanData = await fetchAdvantages();
+      setData(advanData);
+    }
+    getData();
+  }, []);
+
   return (
     <Container fluid className="min-vh-100 card-block">
       <Row className="align-items-center ms-5">
@@ -16,7 +27,7 @@ const BasicCard = () => {
         </Col>
       </Row>
       <Row className="justify-content-center justify-content-lg-between mt-5">
-        {Sdata.map((value, index) => (
+        {ventajas.map((value, index) => (
           <Col
             key={index}
             lg={4}
@@ -34,7 +45,7 @@ const BasicCard = () => {
                 <Card.Title>{value.title}</Card.Title>
                 <hr className="colored-line" />
                 <Card.Text>{value.desc}</Card.Text>
-                <Button variant="primary">Leer más</Button>
+                {/* <Button variant="primary">Leer más</Button> */}
               </Card.Body>
             </Card>
           </Col>
