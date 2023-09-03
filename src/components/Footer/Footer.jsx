@@ -1,17 +1,15 @@
 import React from "react";
+import logo from "../../assets/images/logo.png";
+
 import { Container } from "react-bootstrap";
 
 import "./footer.css";
 
 const Footer = () => {
   return (
-    <Container>
-      <footer>
-        <div className="container-grid">
-          <div className="boxone">
-            <p id="textfooter">
-              Lorem ipsum dolor Quisquam culpa, deleniti neque eius{" "}
-            </p>
+        <div className="container-grid footer">
+          <div className="boxone mt-2">             
+            <img src={logo} alt="Logo" style={{ width: "80px" }} />
           </div>
 
           <div className="boxtwo">
@@ -38,8 +36,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </footer>
-    </Container>
   );
 };
 

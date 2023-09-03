@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
-const EditModal = ({ show, onHide, onSubmit }) => {
+const EditModal = ({ show, onHide, onSubmit, editedCourse, setEditedCourse }) => {
   return (
     <Modal show={show} onHide={onHide}>
       <Modal.Header closeButton>

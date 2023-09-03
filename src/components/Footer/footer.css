@@ -1,4 +1,4 @@
-footer {
+.footer {
     background-color: #3a4264;
     color: #fff;
   }
@@ -7,16 +7,16 @@ footer {
     justify-content: space-between;
   }
 
-  footer p {
+  .footer p {
     font-size: 14px;
     font-weight: 200;
     opacity: 0.5;
     margin-bottom: 20px;
   }
-  footer h2 {
+  .footer h2 {
     margin-bottom: 20px;
   }
-  footer li {
+  .footer li {
     margin-bottom: 10px;
     opacity: 1;
     list-style: none;

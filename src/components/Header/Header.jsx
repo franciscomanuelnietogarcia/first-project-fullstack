@@ -3,69 +3,114 @@ import { NavLink } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/images/logo.png";
 
-import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Form,
+} from "react-bootstrap";
 
 const Header = () => {
   return (
+    // <Navbar>
+    //     <Navbar.Brand as={NavLink} to="/">
+    //       <img src={logo} alt="Logo" style={{ width: "75px" }} />
+    //     </Navbar.Brand>
+    //     <Navbar.Toggle aria-controls="navbarScroll" />
+    //     <Navbar.Collapse id="navbarScroll">
+    //       <Nav className="me-auto my-2 my-lg-0"
+    //         style={{ maxHeight: '100px' }}
+    //         navbarScroll>
+    //         <Nav.Link as={NavLink} to="/" className="text-white">
+    //           Inicio
+    //         </Nav.Link>
+    //         <Nav.Link as={NavLink} to="" className="text-white">Courses</Nav.Link>
+    //         <Nav.Link as={NavLink} to="/Contactos" >
+    //           Sobre nosotros
+    //         </Nav.Link>
+    //       </Nav>
+    //       {/* <Form className="d-flex me-4">
+    //           <Form.Control
+    //             type="search"
+    //             placeholder="Búsqueda"
+    //             className="me-2" // Отступ справа
+    //             aria-label="Buscar"
+    //           />
+    //           <Button variant="outline-success" className="text-white">
+    //             Buscar
+    //           </Button>
+    //         </Form> */}
+    //       <Nav>
+    //         <Nav.Link as={NavLink} to="/Entrar">
+    //           Entrar
+    //         </Nav.Link>
+    //       </Nav>
+    //       <Button
+    //         as={NavLink}
+    //         to="/Registrar"
+    //         variant="primary"
+    //         className="ms-3"
+    //       >
+    //         Registrárme
+    //       </Button>
+    //     </Navbar.Collapse>
+    // </Navbar>
+
     <Navbar
-      fixed="top"
       expand="lg"
-      className="bg-transparent navbar-dark"
-      style={{
-        zIndex: 1000, // Поднимите значение zIndex для Header
-      }}
+      className="bg-transparent"
+      style={{ fontSize: '20px' }}
+      
     >
-      <Container fluid>
-        <div className="d-flex justify-content-between align-items-center">
-          <Navbar.Brand as={NavLink} to="/">
-            <img
-              src={logo}
-              alt="Logo"
-              className="d-inline-block align-top"
-              style={{ width: "80px" }}
-            />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-        </div>
+      <Container>
+        <Navbar.Brand as={NavLink} to="/">
+          <img src={logo} alt="Logo" style={{ width: "80px" }} />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto" navbarScroll>
-            <Nav.Link as={NavLink} to="/">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+            <Nav.Link as={NavLink} to="/" className="text-white">
               Inicio
             </Nav.Link>
-            <Nav.Link href="#action2">Courses</Nav.Link>
+            <Nav.Link as={NavLink} to="" className="text-white">
+              Courses
+            </Nav.Link>
             <Nav.Link as={NavLink} to="/Contactos">
               Sobre nosotros
             </Nav.Link>
           </Nav>
-          <div className="d-flex align-items-center">
-            <Form className="d-flex me-5">
+                  {/* <Form className="d-flex">
               <Form.Control
                 type="search"
-                placeholder="Búsqueda"
-                className="me-2" // Отступ справа
-                aria-label="Buscar"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
               />
-              <Button variant="outline-success" className="text-white">
-                Buscar
-              </Button>
-            </Form>
-            <Nav.Link
-              as={NavLink}
-              to="/Entrar"
-              variant="outline-success"
-              className="text-white"
-            >
+              <Button variant="outline-success">Search</Button>
+            </Form> */}
+          <Nav className="ms-3">
+            <Button as={NavLink} to="/Entrar" variant="outline-primary" >
               Entrar
-            </Nav.Link>
+            </Button>
+          </Nav>
+          <div className="my-2"></div>
+          <Nav>
             <Button
               as={NavLink}
               to="/Registrar"
               variant="primary"
               className="ms-3"
+              size="lg"
             >
               Registrárme
             </Button>
-          </div>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

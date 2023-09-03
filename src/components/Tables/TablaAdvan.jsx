@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Container, Table, Button, Modal, Form } from "react-bootstrap";
+import { Container, Table, Button, } from "react-bootstrap";
 import axios from "axios";
+import EditAdvan from "../Modales/EditAdvan"
 
-const UserManagement = () => {
-  const [users, setUsers] = useState([]);
+const AdvantagesManagement = () => {
+  const [advantages, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [showEditModal, setShowEditModal] = useState(false);
 
@@ -13,10 +14,10 @@ const UserManagement = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/users");
+      const response = await axios.get("http://localhost:5000/advantages");
       setUsers(response.data);
     } catch (error) {
-      console.error("Error fetching users:", error);
+      console.error("Error fetching advantage:", error);
     }
   };
 
@@ -32,7 +33,7 @@ const UserManagement = () => {
 
   const handleSaveUser = async () => {
     try {
-      await axios.put(`http://localhost:5000/users/${selectedUser.id}`, selectedUser);
+      await axios.put(`http://localhost:5000/advantages/${selectedUser.id}`, selectedUser);
       fetchUsers();
       handleCloseEditModal();
     } catch (error) {
@@ -42,26 +43,24 @@ const UserManagement = () => {
 
   return (
     <Container>
-      <h1>Gestión de usuarios</h1>
+      <h1>Gestión de ventajas</h1>
       <Table striped bordered hover>
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Role</th>
+            <th>Title</th>
+            <th>Desc</th>
+            <th>Cover</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {advantages.map((user) => (
             <tr key={user.id}>
               <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>{user.password}</td>
-              <td>{user.role}</td>
+              <td>{user.title}</td>
+              <td>{user.desc}</td>
+              <td>{user.cover}</td>
               <td>
                 <Button variant="warning" onClick={() => handleEditUser(user)}>Modificar</Button>
               </td>
@@ -70,80 +69,14 @@ const UserManagement = () => {
         </tbody>
       </Table>
 
-      <Modal show={showEditModal} onHide={handleCloseEditModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modificar</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                type="text"
-                value={selectedUser ? selectedUser.name : ""}
-                onChange={(e) =>
-                  setSelectedUser({
-                    ...selectedUser,
-                    name: e.target.value,
-                  })
-                }
-              />
-            </Form.Group>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                value={selectedUser ? selectedUser.email : ""}
-                onChange={(e) =>
-                  setSelectedUser({
-                    ...selectedUser,
-                    email: e.target.value,
-                  })
-                }
-              />
-            </Form.Group>
-            <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                value={selectedUser ? selectedUser.password : ""}
-                onChange={(e) =>
-                  setSelectedUser({
-                    ...selectedUser,
-                    password: e.target.value,
-                  })
-                }
-              />
-            </Form.Group>
-            <Form.Group controlId="formBasicRole">
-              <Form.Label>Role</Form.Label>
-              <Form.Control
-                as="select"
-                value={selectedUser ? selectedUser.role : ""}
-                onChange={(e) =>
-                  setSelectedUser({
-                    ...selectedUser,
-                    role: e.target.value,
-                  })
-                }
-              >
-                <option value="Admin">Admin</option>
-                <option value="User">User</option>
-              </Form.Control>
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseEditModal}>
-            Cerrar
-          </Button>
-          <Button variant="primary" onClick={handleSaveUser}>
-            Guardar
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <EditAdvan show={showEditModal}
+       onHide={handleCloseEditModal}
+       onSubmit={handleSaveUser}
+       selectedUser={selectedUser}
+       setSelectedUser={setSelectedUser}
+       />
     </Container>
   );
 };
 
-export default UserManagement;
+export default AdvantagesManagement;

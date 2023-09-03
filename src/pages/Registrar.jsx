@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Form, Row, Col, Button, Toast } from "react-bootstrap";
+import { Form, Row, Col, Button, Toast, Container } from "react-bootstrap";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 import "./Registrar.css";
 import logo from "../assets/images/logo.png";
 import axios from "axios";
@@ -60,10 +61,8 @@ function Registrar() {
   };
 
   return (
-    <>
+    <Container className="registrar">
       <Header />
-      <div></div>
-      <div className="d-flex justify-content-center align-items-center vh-100 registrar">
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <img 
         className="mb-4 text-center mx-auto d-block"
@@ -71,8 +70,8 @@ function Registrar() {
         alt="logo CoursDev"
         height="72"
       />
-          <Row className="mb-3 mt-5">
-            <Form.Group as={Col} md="6" controlId="validationCustom01">
+          <Row className="mb-1 mt-4 d-flex justify-content-center">
+            <Form.Group as={Col} md="3" controlId="validationCustom01">
               <Form.Label className="fs-5">Nombre</Form.Label>
               <Form.Control
                 required
@@ -86,7 +85,7 @@ function Registrar() {
                 Por favor proporcione un nombre válido.
               </Form.Control.Feedback>
             </Form.Group>
-            <Form.Group as={Col} md="6" controlId="validationCustom02">
+            <Form.Group as={Col} md="3" controlId="validationCustom02">
               <Form.Label className="fs-5">Email</Form.Label>
               <Form.Control
                 required
@@ -101,10 +100,10 @@ function Registrar() {
               </Form.Control.Feedback>
             </Form.Group>
           </Row>
-          <Row className="mb-3">
+          <Row className="mb-3 d-flex justify-content-center">
             <Form.Group
               as={Col}
-              md="6"
+              md="3"
               className="p-3"
               controlId="validationCustom03"
             >
@@ -124,7 +123,7 @@ function Registrar() {
             </Form.Group>
             <Form.Group
               as={Col}
-              md="6"
+              md="3"
               className="p-3"
               controlId="validationCustom04"
             >
@@ -145,7 +144,7 @@ function Registrar() {
             </Form.Group>
           </Row>
           <Button type="submit" className="mt-4 text-center mx-auto d-block">
-            Entregar form
+            Entregar
           </Button>
           <p className="mt-5 mb-3 text-center text-muted"> CoursDev © 2023</p>
         </Form>
@@ -162,8 +161,8 @@ function Registrar() {
           </Toast.Header>
           <Toast.Body>¡Datos enviados exitosamente!</Toast.Body>
         </Toast>
-      </div>
-    </>
+        <Footer/>
+    </Container>
   );
 }
 
