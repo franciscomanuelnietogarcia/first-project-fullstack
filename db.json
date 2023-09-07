@@ -33,7 +33,8 @@
     {
       "id": 1,
       "title": "HTML, CSS desde cero",
-      "desc": "lorem",
+      "desc": "HTML es un lenguaje de marcado utilizado para crear la estructura y el contenido de las páginas web. Permite definir elementos como encabezados, párrafos, listas, enlaces, imágenes y más. Estos elementos se organizan en un documento HTML utilizando etiquetas, que son instrucciones rodeadas por corchetes angulares, como <p> para párrafos o <img> para imágenes. Las etiquetas se pueden anidar para crear una estructura jerárquica en la página.
+      CSS es un lenguaje utilizado para dar estilo y diseño a las páginas web creadas con HTML. Permite controlar aspectos como el color, la tipografía, el diseño de la página, el espaciado y mucho más. En lugar de agregar estilos directamente a los elementos HTML, se separan los estilos del contenido utilizando reglas de CSS.",
       "price": "20",
       "time": "10",
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof1_vpyjmj.jpg"
@@ -41,7 +42,9 @@
     {
       "id": 2,
       "title": "JavaScript desde cero",
-      "desc": "lorem",
+      "desc": "JavaScript es un lenguaje de programación ampliamente utilizado en el desarrollo web y más allá. Aquí tienes una breve descripción de JavaScript:
+
+      JavaScript es un lenguaje de programación de alto nivel, interpretado y orientado a objetos ampliamente utilizado en el desarrollo web. A menudo se utiliza en combinación con HTML y CSS para crear páginas web interactivas y dinámicas. JavaScript permite a los desarrolladores agregar funcionalidad a sus sitios web, como validación de formularios, animaciones, manipulación de datos en tiempo real y comunicación con servidores.",
       "price": "20",
       "time": "10",
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof5_skji9z.jpg"
@@ -49,7 +52,7 @@
     {
       "id": 3,
       "title": "Qué es React?",
-      "desc": "lorem",
+      "desc": "React es una popular biblioteca de JavaScript desarrollada por Facebook. Se utiliza para crear interfaces de usuario interactivas y dinámicas en aplicaciones web. React se centra en la creación de componentes reutilizables que gestionan el estado de la aplicación y responden a los cambios en los datos para actualizar la interfaz de usuario de manera eficiente. Es ampliamente utilizado en el desarrollo web moderno para construir aplicaciones de una sola página (SPA) y aplicaciones de interfaz de usuario en tiempo real.",
       "price": "25",
       "time": "12",
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof6_cfimkt.jpg"
@@ -57,7 +60,7 @@
     {
       "id": 4,
       "title": "C# ",
-      "desc": "Lorem",
+      "desc": "es un lenguaje de programación desarrollado por Microsoft. Es un lenguaje de programación de propósito general que se utiliza para crear una amplia variedad de aplicaciones, incluyendo aplicaciones de escritorio de Windows, aplicaciones web, aplicaciones móviles y más.",
       "price": "60",
       "time": "30",
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof2_aijttj.jpg"
@@ -65,7 +68,7 @@
     {
       "id": 5,
       "title": "Java",
-      "desc": "lorem",
+      "desc": "Java es conocido por su portabilidad y capacidad multiplataforma. Los programas escritos en Java se compilan en un formato intermedio llamado "bytecode", que puede ejecutarse en cualquier máquina virtual de Java (JVM), lo que permite que las aplicaciones Java sean independientes del sistema operativo subyacente.",
       "price": "100",
       "time": "60",
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof3_vwpigo.jpg"
@@ -73,7 +76,15 @@
     {
       "id": 6,
       "title": ".Net",
-      "desc": "bla bla",
+      "desc": ".NET es una plataforma de desarrollo de software versátil y ampliamente utilizada que se utiliza para crear una amplia variedad de aplicaciones, desde aplicaciones de escritorio de Windows hasta aplicaciones web y servicios en la nube. Se compone de varios componentes clave, incluyendo:
+
+      Common Language Runtime (CLR): El CLR es un entorno de ejecución que forma parte de .NET y se encarga de compilar y ejecutar el código escrito en lenguajes de programación compatibles con .NET, como C# y Visual Basic. Además, gestiona la administración de memoria y proporciona características de seguridad.
+      
+      Framework Class Library (FCL): El FCL es una biblioteca de clases predefinidas que ofrece un conjunto de funcionalidades y servicios que los desarrolladores pueden utilizar para crear aplicaciones. Incluye una amplia gama de clases para realizar tareas comunes como manipulación de archivos, acceso a bases de datos, creación de interfaces de usuario y más.
+      
+      Lenguajes de programación: .NET admite varios lenguajes de programación, siendo C# uno de los más populares. Los desarrolladores pueden elegir el lenguaje que mejor se adapte a sus necesidades y preferencias.
+      
+      Herramientas de desarrollo: Microsoft proporciona herramientas de desarrollo integradas como Visual Studio, que facilitan la creación, depuración y despliegue de aplicaciones .NET.",
       "price": "200",
       "time": "40",
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg"

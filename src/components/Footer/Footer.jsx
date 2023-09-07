@@ -3,6 +3,10 @@ import { Container } from "react-bootstrap";
 
 import "./footer.css";
 
+export function sum(a, b) {
+  return a + b
+}
+
 const Footer = () => {
   return (
     <Container>
