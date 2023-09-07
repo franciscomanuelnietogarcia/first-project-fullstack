@@ -1,4 +1,5 @@
 import React from "react";
+import '../MainPage/Home.css';
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import Header from "../Header/Header";
 import BasicCard from "../Cards/Card";
@@ -9,14 +10,18 @@ import TopButton from "../TopButton/TopButton"
 
 const Home = () => {
   return (
-    <section>
-      <Container>
+    <section className="Banner"> {/* Usar className en lugar de class */}
+      <Container fluid> {/* Usar la clase fluid para ocupar todo el ancho */}
         <Header />
         <Card className="bg-dark text-white">
           <Card.Img
             src={background}
             alt="main-pic"
-            style={{ objectFit: "cover", maxHeight: "100vh" }}
+            style={{
+              objectFit: "cover",
+              width: "100vw", // Establecer el ancho de la imagen
+              height: "100%",
+            }}
           />
           <Card.ImgOverlay>
             <Card.Title

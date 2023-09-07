@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import axios from "axios";
-import { fetchCards } from "../../Service/Api";
-import "./CoursCard.css";
+import { fetchCourses } from "../Service/Api";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 
-const CoursCard = () => {
-  const [teachers, setData] = useState([]);
+
+const Courses = () => {
+  const [courses, setData] = useState([]);
 
   useEffect(() => {
     async function getData() {
-      const teachersData = await fetchCards();
-      setData(teachersData);
+      const coursesData = await fetchCourses();
+      setData(coursesData);
     }
     getData();
   }, []);
 
   return (
-    <Container fluid className="min-vh-100 CoursCard-">
+    <section>
+    <Header />
+    <Container fluid className="min-vh-100 CoursCard-block">
       <Row className="justify-content-center justify-content-lg-between mt-5">
-        {teachers.map((value, index) => (
+        {courses.map((value, index) => (
           <Col
             key={index}
             lg={4}
@@ -41,7 +45,9 @@ const CoursCard = () => {
         ))}
       </Row>
     </Container>
+    <Footer />
+    </section>
   );
 };
 
-export default CoursCard;
+export default Courses;

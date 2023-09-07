@@ -22,7 +22,7 @@ const Header = () => {
               src={logo}
               alt="Logo"
               className="d-inline-block align-top"
-              style={{ width: "80px" }}
+              style={{ width: "100px" }}
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -32,7 +32,7 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/">
               Inicio
             </Nav.Link>
-            <Nav.Link href="#action2">Courses</Nav.Link>
+            <Nav.Link href="Courses">Courses</Nav.Link>
             <Nav.Link as={NavLink} to="/Contactos">
               Sobre nosotros
             </Nav.Link>

@@ -20,5 +20,9 @@ export async function fetchAdvantages() {
 }
 
 export async function fetchCards() {
-  return fetchData("http://localhost:5000/course");
+  return fetchData("http://localhost:5000/teachers");
+}
+
+export async function fetchCourses() {
+  return fetchData("http://localhost:5000/courses");
 }

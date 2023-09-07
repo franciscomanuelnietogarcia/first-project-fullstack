@@ -1,9 +1,23 @@
+.container{
+  width: 100%;
+  background-color: #1a1e33;
+  padding: 0;
+}
+
+
 .colored-line {
   border-top: 4px solid #e94560; /* Цвет линии */
   margin: 10px 0; /* Отступы сверху и снизу линии */
 }
-.card-block {
-  background-color: #3a4264; /* Цвет фона */
-  /*padding: 20px; /* Внутренний отступ для блока с карточками */
-  /*margin-top: 20px; /* Отступ сверху */
-}
+
+/* 
+.card-block-container {
+  
+  width: 100%;
+  height: 100vh;
+  background-color: #1a1e33;
+} */
+
+
+
+

@@ -29,7 +29,77 @@
       "role": "User"
     }
   ],
-  "course": [
+  "teachers": [
+    {
+      "id": 1,
+      "teacher": "Celia Garcia",
+      "studies": "Licenciatura en Ciencias de la computacion",
+      "experience": "10 años en desarrollo de software",
+      "specialization": "Desarrollo web y aplicaciones moviles",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof1_vpyjmj.jpg"
+    },
+    {
+      "id": 2,
+      "teacher": "Paloma Ruiz",
+      "studies": "Maestria en Ingenieria de software",
+      "experience": "10 años como programadora y 5 años como docente",
+      "specialization": "Programa orientada a objetos",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof5_skji9z.jpg"
+    },
+    {
+      "id": 3,
+      "teacher": "Marcos Chotsourian",
+      "studies": "Doctora en Ciencias de la computacion",
+      "experience": "15 años enseñando programacion",
+      "specialization": "Decir buenisimoo",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof6_cfimkt.jpg"
+    },
+    {
+      "id": 4,
+      "teacher": "Gemma",
+      "studies": "Licenciatura en recursos humanos",
+      "experience": "Mas de 10 años en el campo de insercion laboral",
+      "specialization": "Programas de insercion laboral",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof2_aijttj.jpg"
+    },
+    {
+      "id": 5,
+      "teacher": "Bard Simsonp",
+      "studies": "Maestria en seguridad informatica",
+      "experience": "12 años en ciberseguridad",
+      "specialization": "Seguridad de redes",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof3_vwpigo.jpg"
+    },
+    {
+      "id": 6,
+      "teacher": "Antonio",
+      "studies": "Grado de ingenieria informatica",
+      "experience": "7 años como desrrolladora",
+      "specialization": "Base de datos y SQL ",
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg"
+    }
+  ],
+  "advantages": [
+    {
+      "id": 1,
+      "title": "Orientación práctica",
+      "desc": "Somos conscientes de que la práctica desempeña un papel importante en el aprendizaje de la programación. Por eso nuestros cursos hacen hincapié en la aplicación práctica de los conocimientos. Te esperan proyectos reales, tareas interactivas y deberes, que te ayudarán a consolidar tus conocimientos y a aplicarlos con confianza en la práctica.",
+      "cover": ""
+    },
+    {
+      "id": 2,
+      "title": "Modo de aprendizaje flexible",
+      "desc": "Con CourDevs, puede estudiar cuando más le convenga. Puede elegir el horario que más le convenga, incluidos los fines de semana; usted decide qué ritmo de estudio le resulta más cómodo. Todos los materiales de las lecciones, los vídeos y las tareas están disponibles las 24 horas del día, los 7 días de la semana, para ayudarle a aprovechar al máximo su tiempo.",
+      "cover": "./images/test.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Profesores profesionales, Resultados reales",
+      "desc": "Estamos orgullosos de nuestro equipo de tutores, que no sólo tienen un profundo conocimiento del desarrollo de sitios web, sino que también transmiten con éxito su experiencia a los estudiantes. Gracias a su pericia y a sus habilidades docentes, podrás conseguir resultados reales en el dominio de este fascinante campo.",
+      "cover": ""
+    }
+  ],
+  "courses": [
     {
       "id": 1,
       "title": "HTML, CSS desde cero",
@@ -77,26 +147,6 @@
       "price": "200",
       "time": "40",
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg"
-    }
-  ],
-  "advantages": [
-    {
-      "id": 1,
-      "title": "Orientación práctica",
-      "desc": "Somos conscientes de que la práctica desempeña un papel importante en el aprendizaje de la programación. Por eso nuestros cursos hacen hincapié en la aplicación práctica de los conocimientos. Te esperan proyectos reales, tareas interactivas y deberes, que te ayudarán a consolidar tus conocimientos y a aplicarlos con confianza en la práctica.",
-      "cover": ""
-    },
-    {
-      "id": 2,
-      "title": "Modo de aprendizaje flexible",
-      "desc": "Con CourDevs, puede estudiar cuando más le convenga. Puede elegir el horario que más le convenga, incluidos los fines de semana; usted decide qué ritmo de estudio le resulta más cómodo. Todos los materiales de las lecciones, los vídeos y las tareas están disponibles las 24 horas del día, los 7 días de la semana, para ayudarle a aprovechar al máximo su tiempo.",
-      "cover": "./images/test.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Profesores profesionales, Resultados reales",
-      "desc": "Estamos orgullosos de nuestro equipo de tutores, que no sólo tienen un profundo conocimiento del desarrollo de sitios web, sino que también transmiten con éxito su experiencia a los estudiantes. Gracias a su pericia y a sus habilidades docentes, podrás conseguir resultados reales en el dominio de este fascinante campo.",
-      "cover": ""
     }
   ]
 }

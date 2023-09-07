@@ -15,8 +15,10 @@ const BasicCard = () => {
     getData();
   }, []);
 
+
+
   return (
-    <Container fluid className="min-vh-100 card-block">
+    <Container className="min-vh-100 card-block-container">
       <Row className="align-items-center ms-5">
         <Col lg={6} className="d-flex flex-column align-items-start text-white">
           <h1 className="pl-3 mb-3 mt-3"> Ventajas de Formarse con Nosotros.
