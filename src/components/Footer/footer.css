@@ -16,11 +16,11 @@ footer {
   footer h2 {
     margin-bottom: 20px;
   }
-  footer li {
+   footer li {
     margin-bottom: 10px;
     opacity: 1;
-    list-style: none;
-  }
+    list-style: none; 
+  } 
   
   #textfooter {
     color: white;

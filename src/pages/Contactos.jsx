@@ -31,6 +31,19 @@ const Contactos = () => {
               encontrarás una amplia variedad de cursos en nuestra plataforma.
             </p>
             <p>
+            Nuestros cursos están diseñados con un enfoque práctico y hands-on. 
+            Creemos que la mejor manera de aprender a programar es a través de la experimentación activa. 
+            Nuestros instructores altamente capacitados no solo te guiarán a través de los conceptos fundamentales, 
+            sino que también te desafiarán con proyectos del mundo real 
+            que te permitirán aplicar tus conocimientos en situaciones prácticas.
+            </p>
+            <p>
+              Además de ofrecer una variedad de cursos, 
+              ya sea que estés dando tus primeros pasos en la programación o busques perfeccionar tus habilidades, 
+              tenemos una amplia gama de cursos para todos los niveles. Desde fundamentos de programación 
+              hasta cursos especializados en tecnologías emergentes, estamos aquí para satisfacer tus necesidades de aprendizaje.
+            </p>
+            <p>
               Estamos dedicados a brindarte una experiencia de aprendizaje
               excepcional. ¡Esperamos que disfrutes de tu tiempo en CoursDev y
               te deseamos mucho éxito en tu viaje de aprendizaje!
