@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import "./Contactos.css"
+import Pages from "../pages/Contactos/Contactos";
 
 
 const Contactos = () => {
