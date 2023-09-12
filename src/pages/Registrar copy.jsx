@@ -1,11 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Form, Row, Col, Button, Toast, Container } from "react-bootstrap";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import "./Registrar.css";
 import logo from "../assets/images/logo.png";
 import axios from "axios";
-import ReCAPTCHA from 'react-google-recaptcha';
 
 function Registrar() {
   const [validated, setValidated] = useState(false);
@@ -23,10 +22,7 @@ function Registrar() {
     setConfirmPassword(event.target.value);
   };
 
-  const captcha = useRef(null);
-  const [captchaValue, setCaptchaValue] = useState(null);
 
-  
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -39,7 +35,7 @@ function Registrar() {
     event.preventDefault();// Предотвращаем отправку формы по умолчанию Impedir el envío de formularios de forma predeterminada
     const form = event.currentTarget;
 
-  if (form.checkValidity() === false || formData.password !== confirmPassword || captchaValue === null) {
+  if (form.checkValidity() === false || formData.password !== confirmPassword) {
       event.stopPropagation();
       setValidated(true);
       return;
@@ -52,13 +48,6 @@ function Registrar() {
         );
         const newUserData = response.data;
         console.log("Respuesta del servidor:", newUserData);
-        setFormData({
-          name: "",
-          email: "",
-          password: "",
-          confirmPassword: ""
-        });
-        
         setValidated(true);
         setShowSuccessToast(true);
         setTimeout(() => {
@@ -68,9 +57,6 @@ function Registrar() {
         console.error("Error en el envío de datos:", error);
       }
     
-    form.reset();
-    captcha.current.reset();
-    setCaptchaValue(null);
     setValidated(true);
   };
 
@@ -78,7 +64,12 @@ function Registrar() {
     <Container className="registrar">
       <Header />
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
-
+        <img 
+        className="mb-4 text-center mx-auto d-block"
+        src={logo}
+        alt="logo CoursDev"
+        height="72"
+      />
           <Row className="mb-1 mt-4 d-flex justify-content-center">
             <Form.Group as={Col} md="3" controlId="validationCustom01">
               <Form.Label className="fs-5">Nombre</Form.Label>
@@ -152,15 +143,10 @@ function Registrar() {
               </Form.Control.Feedback>
             </Form.Group>
           </Row>
-          <ReCAPTCHA
-            className="d-flex justify-content-center"
-            ref={captcha}
-            sitekey="6LcHSjEmAAAAADpYYDwgZFzzNw5nBlrt5VfXFiVc"
-            onChange={(value) => setCaptchaValue(value)}
-          />
           <Button type="submit" className="mt-4 text-center mx-auto d-block">
             Entregar
           </Button>
+          <p className="mt-5 mb-3 text-center text-muted"> CoursDev © 2023</p>
         </Form>
         <Toast
           show={showSuccessToast}
@@ -175,7 +161,6 @@ function Registrar() {
           </Toast.Header>
           <Toast.Body>¡Datos enviados exitosamente!</Toast.Body>
         </Toast>
-        <div>.</div>
         <Footer/>
     </Container>
   );

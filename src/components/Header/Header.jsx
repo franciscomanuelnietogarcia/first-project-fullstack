@@ -57,22 +57,23 @@ const Header = () => {
     //       </Button>
     //     </Navbar.Collapse>
     // </Navbar>
-
+    <>
     <Navbar
-      expand="lg"
+      collapseOnSelect
+      expand="md"
       className="bg-transparent"
       style={{ fontSize: '20px' }}
-      
+
     >
       <Container>
-        <Navbar.Brand as={NavLink} to="/">
-          <img src={logo} alt="Logo" style={{ width: "80px" }} />
+        <Navbar.Brand as={NavLink} to="/" className="text-light">
+          <img src={logo} alt="Logo" className="d-inline-block" style={{ width: "80px" }} />
+          CoursDev
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
             navbarScroll
           >
             <Nav.Link as={NavLink} to="/" className="text-white">
@@ -114,6 +115,7 @@ const Header = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </>
   );
 };
 

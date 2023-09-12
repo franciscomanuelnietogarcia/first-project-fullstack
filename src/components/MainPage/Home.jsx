@@ -9,12 +9,13 @@ import "./Home.css";
 
 const Home = () => {
   return (
+    <>
     <Container >
         <div className="position-relative">
             <img src={background} alt="main-banner" className="w-100" />
           <div className="overlay position-absolute top-0 start-0">
             <Header />
-              <Row className="margin">
+              <Row>
                 <Card.Title className="mt-5 fs-1 text-light ms-5">
                 Estudia <br />
                 Donde estés <br />
@@ -39,6 +40,7 @@ const Home = () => {
           </Row>
         <Footer />
     </Container>
+    </>
   );
 };
 

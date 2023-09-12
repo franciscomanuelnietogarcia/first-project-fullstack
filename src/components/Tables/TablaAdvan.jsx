@@ -42,7 +42,7 @@ const AdvantagesManagement = () => {
   };
 
   return (
-    <Container>
+    <Container border="primary">
       <h1>Gestión de ventajas</h1>
       <Table striped bordered hover>
         <thead>
@@ -75,7 +75,7 @@ const AdvantagesManagement = () => {
        selectedUser={selectedUser}
        setSelectedUser={setSelectedUser}
        />
-    </Container>
+       </Container>
   );
 };
 

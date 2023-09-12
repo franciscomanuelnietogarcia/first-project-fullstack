@@ -7,6 +7,9 @@ import Contactos from "./pages/Contactos";
 import Entrar from "./pages/Entrar";
 import Registrar from "./pages/Registrar";
 import AdminPanel from "./pages/AdminPanel";
+import PersonalArea from "./pages/PersonalArea"
+//import { Component } from "react";
+//import { Switch } from "@prismane/core/*";
 
 const App = () => {
   return (
@@ -15,9 +18,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Contactos" element={<Contactos />} />
           <Route path="/Entrar" element={<Entrar />} />
-          <Route path="/Entrar" element={<Entrar />} />
           <Route path="/Registrar" element={<Registrar />} />
           <Route path="/AdminPanel" element={<AdminPanel />} />
+          <Route path="/PersonalArea" element={<PersonalArea />} />
         </Routes>
       </Router>
   );

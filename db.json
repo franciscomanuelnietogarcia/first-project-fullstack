@@ -27,13 +27,20 @@
       "email": "ramunozg@gmail.com",
       "password": "123456",
       "role": "User"
+    },
+    {
+      "id": "7Z3b4vG",
+      "name": "тест",
+      "email": "vg.fitlin@gmail.com",
+      "password": "123",
+      "role": "User"
     }
   ],
   "course": [
     {
       "id": 1,
       "title": "HTML, CSS desde cero",
-      "desc": "lorem",
+      "desc": "loremцуцуй",
       "price": "20",
       "time": "10",
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof1_vpyjmj.jpg"
@@ -72,11 +79,11 @@
     },
     {
       "id": 6,
-      "title": ".Net",
-      "desc": "bla bla",
-      "price": "200",
-      "time": "40",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg"
+      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg",
+      "title": "no se",
+      "price": "10",
+      "time": "45",
+      "desc": "bla"
     }
   ],
   "advantages": [

@@ -55,6 +55,9 @@ const Entrar = () => {
         if (user) {
           if (user.role === "Admin") {
             navigate("/AdminPanel");
+          }  
+          else if (user.role === "User") {
+              navigate("/PersonalArea", { state: { user } });
           } else {
             setLoginError("Acceso no autorizado");
           }

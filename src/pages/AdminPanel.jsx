@@ -22,6 +22,7 @@ import "./Registrar.css";
 function CoursList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  
   const [Coursedata, setCoursedata] = useState([]);
   //модальное окно добавления -ventana modal añadir
   const [showAddModal, setShowAddModal] = useState(false);
