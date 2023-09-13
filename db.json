@@ -149,33 +149,6 @@
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg"
     }
 
-    ],
-    "coursesAdd": [
-      {
-        "id": 1,
-        "title": "HTML, CSS desde cero",
-        "desc": "lorem",
-        "price": "20",
-        "time": "10",
-        "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof1_vpyjmj.jpg"
-      },
-      {
-        "id": 2,
-        "title": "JavaScript desde cero",
-        "desc": "lorem",
-        "price": "20",
-        "time": "10",
-        "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof5_skji9z.jpg"
-      },
-      {
-        "id": 3,
-        "title": "Qué es React?",
-        "desc": "lorem",
-        "price": "25",
-        "time": "12",
-        "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof6_cfimkt.jpg"
-      }
-  
     ]
 
 }
