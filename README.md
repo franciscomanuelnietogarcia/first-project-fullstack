@@ -79,7 +79,7 @@ The "Program" refers to the entry point of the application. In the context of an
 For the future, we would like to be able to add images to visually complement the products added. It would also be interesting to differentiate between types of customers/users, whether they are individuals or businesses/companies. Allowing users to create a profile to access various promotions or discounts would be beneficial as well. Similarly, we aim to configure the SQL Server to send purchase confirmations to users via email. Lastly, we plan to work on the front-end to create a web page that replaces the Swagger interface and link it with the database.
 
 ## Authors 👨‍💻👩‍💻
-<br>Francisco Manuel Nieto</sub> https://github.com/franciscomanuelnietogarcia</br>
+<br>Francisco Manuel Nieto https://github.com/franciscomanuelnietogarcia</br>
  <br>Celia Gil Prieto https://github.com/CeliaGilPrieto</br>
 <br>Viacheslav Fitlin https://github.com/Slavafit</br>
  <br>Christian Jaiki https://github.com/ChristianJaiki12</br>
