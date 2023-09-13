@@ -35,7 +35,7 @@ This project aimed to create a database and a REST API. Its goal is to develop a
 3. Open View/Server Explorer and add the connection to your computer using SQL Server.
 4. In appsettings.json, add your SQL Server connection under "ServiceContext". Obtain information from properties.
 5. Compile the code from Microsoft Visual Studio 2022.
-6. Once installed, in Swagger, to add content, you need to enter the Administrator 1 query: Username (Equipo 1) and password (BootCamp).
+6. Once installed, in Swagger, to add content, you need to enter the Administrator 1 query: Username (Equipo 2) and password (BootCamp).
 7. Create, modify, and delete content in Swagger.
 8. View the stored data in the SQL Server tables.
 
