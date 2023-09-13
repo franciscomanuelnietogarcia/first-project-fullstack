@@ -76,7 +76,6 @@ function Registrar() {
 
   return (
     <Container className="registrar">
-      <Header />
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
 
           <Row className="mb-1 mt-4 d-flex justify-content-center">
@@ -176,7 +175,6 @@ function Registrar() {
           <Toast.Body>¡Datos enviados exitosamente!</Toast.Body>
         </Toast>
         <div>.</div>
-        <Footer/>
     </Container>
   );
 }

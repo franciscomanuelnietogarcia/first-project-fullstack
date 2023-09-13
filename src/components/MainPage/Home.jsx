@@ -14,7 +14,6 @@ const Home = () => {
         <div className="position-relative">
             <img src={background} alt="main-banner" className="w-100" />
           <div className="overlay position-absolute top-0 start-0">
-            <Header />
               <Row>
                 <Card.Title className="mt-5 fs-1 text-light ms-5">
                 Estudia <br />
@@ -38,7 +37,6 @@ const Home = () => {
               <CoursCard />
             </Col>
           </Row>
-        <Footer />
     </Container>
     </>
   );

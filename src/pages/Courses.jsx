@@ -2,10 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import axios from "axios";
 import { fetchCourses } from "../Service/Api";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-
-
 
 const Courses = () => {
   const [courses, setData] = useState([]);
@@ -20,7 +16,6 @@ const Courses = () => {
 
   return (
     <section>
-    <Header />
     <Container fluid className="min-vh-100 CoursCard-block">
       <Row className="justify-content-center justify-content-lg-between mt-5">
         {courses.map((value, index) => (
@@ -45,7 +40,6 @@ const Courses = () => {
         ))}
       </Row>
     </Container>
-    <Footer />
     </section>
   );
 };

@@ -36,7 +36,7 @@
       "studies": "Licenciatura en Ciencias de la computacion",
       "experience": "10 años en desarrollo de software",
       "specialization": "Desarrollo web y aplicaciones moviles",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof1_vpyjmj.jpg"
+      "cover": "https://res.cloudinary.com/doft9ylq1/image/upload/v1694631398/celia_iyqca9.png"
     },
     {
       "id": 2,
@@ -44,7 +44,7 @@
       "studies": "Maestria en Ingenieria de software",
       "experience": "10 años como programadora y 5 años como docente",
       "specialization": "Programa orientada a objetos",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof5_skji9z.jpg"
+      "cover": "https://res.cloudinary.com/doft9ylq1/image/upload/v1694631181/paloma_me0qon.jpg"
     },
     {
       "id": 3,
@@ -52,31 +52,31 @@
       "studies": "Doctora en Ciencias de la computacion",
       "experience": "15 años enseñando programacion",
       "specialization": "Decir buenisimoo",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof6_cfimkt.jpg"
+      "cover": "https://res.cloudinary.com/doft9ylq1/image/upload/v1694631532/MArcos_zl9eok.jpg"
     },
     {
       "id": 4,
-      "teacher": "Gemma",
+      "teacher": "Gemma Morato",
       "studies": "Licenciatura en recursos humanos",
       "experience": "Mas de 10 años en el campo de insercion laboral",
       "specialization": "Programas de insercion laboral",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof2_aijttj.jpg"
-    },
-    {
-      "id": 5,
-      "teacher": "Bard Simsonp",
-      "studies": "Maestria en seguridad informatica",
-      "experience": "12 años en ciberseguridad",
-      "specialization": "Seguridad de redes",
       "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof3_vwpigo.jpg"
     },
     {
+      "id": 5,
+      "teacher": "Angel Serrano",
+      "studies": "Maestria en seguridad informatica",
+      "experience": "12 años en ciberseguridad",
+      "specialization": "Seguridad de redes",
+      "cover": "https://res.cloudinary.com/doft9ylq1/image/upload/v1694631269/Angel_s88s8l.png"
+    },
+    {
       "id": 6,
-      "teacher": "Antonio",
+      "teacher": "Antonio Ferroñan",
       "studies": "Grado de ingenieria informatica",
-      "experience": "7 años como desrrolladora",
+      "experience": "7 años como desrrollador",
       "specialization": "Base de datos y SQL ",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg"
+      "cover": "https://res.cloudinary.com/doft9ylq1/image/upload/v1694626351/Screenshot_20230913-104532_md7imj.png"
     }
   ],
   "advantages": [

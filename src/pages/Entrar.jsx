@@ -74,7 +74,6 @@ const Entrar = () => {
 
   return (
     <Container className="registrar">
-      <Header />
 
         <Form
           noValidate
@@ -145,7 +144,6 @@ const Entrar = () => {
             </Button>
           </Modal.Footer>
         </Modal>
-      <Footer />
     </Container>
   );
 };

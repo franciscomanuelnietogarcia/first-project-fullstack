@@ -2,14 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Link } from "react-router-dom";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 import "./Contactos.css";
 
 const Contactos = () => {
   return (
     <Container>
-      <Header />
       <Container className="mt-5">
         <Row className="my-5">
           <Col>
@@ -38,7 +35,6 @@ const Contactos = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </Container>
   );
 };
