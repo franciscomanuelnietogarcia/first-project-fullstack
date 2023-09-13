@@ -33,3 +33,14 @@
     flex: 1;
     margin-top: 0;
   }
+  .boxtwo ul li,
+  .boxtwo h2 {
+    color: #999; /* Color claro por defecto */
+    transition: color 0.3s; /* Transición suave para el color */
+  }
+  
+  /* Cambia el color de las letras en hover */
+  .boxtwo:hover ul li,
+  .boxtwo:hover h2 {
+    color: #ffffff; 
+  }
