@@ -30,7 +30,7 @@ This project aimed to create a database and a REST API. Its goal is to develop a
 
 ## Installation Process ⬆️
 
-1. Clone the GitHub repository: https://github.com/miguelcidoncha/APIWeb
+1. Clone the GitHub repository: https://github.com/franciscomanuelnietogarcia/first-project-fullstack.git
 2. Open the file using Microsoft Visual Studio 2022.
 3. Open View/Server Explorer and add the connection to your computer using SQL Server.
 4. In appsettings.json, add your SQL Server connection under "ServiceContext". Obtain information from properties.
