@@ -1,31 +1,33 @@
+
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { fetchCards } from "../../Service/Api";
 import "./CoursCard.css";
 
-
 const CoursCard = () => {
   const [courses, setData] = useState([]);
+  const [expandedCards, setExpandedCards] = useState([]); // Estado para controlar qué tarjetas están expandidas
 
   useEffect(() => {
     async function getData() {
       const coursesData = await fetchCards();
       setData(coursesData);
+      // Inicializa el estado para todas las tarjetas como false (no expandidas)
+      setExpandedCards(new Array(coursesData.length).fill(false));
     }
     getData();
   }, []);
 
+  const toggleCardExpansion = (index) => {
+    // Invierte el estado de expansión para la tarjeta en el índice dado
+    const updatedExpandedCards = [...expandedCards];
+    updatedExpandedCards[index] = !updatedExpandedCards[index];
+    setExpandedCards(updatedExpandedCards);
+  };
+
   return (
     <Container fluid className="min-vh-100 CoursCard-block">
-            <Row className="align-items-center ms-5">
-        <Col lg={6} className="d-flex flex-column align-items-start text-white">
-          <h1 className="pl-3 mb-3 mt-3"> Nuestros formadores.
-          </h1>
-          <h4 className="text-warning pl-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni quidem nobis vitae, natus iure iste sequi quas omnis temporibus eum commodi eligendi quis doloribus possimus numquam in excepturi tempora! Doloremque!.
-          </h4>
-        </Col>
-      </Row>
+      {/* ... (tu código existente) */}
       <Row className="justify-content-center justify-content-lg-between mt-5">
         {courses.map((value, index) => (
           <Col
@@ -38,9 +40,20 @@ const CoursCard = () => {
               <Card.Img variant="top" src={value.cover} />
               <Card.Body>
                 <Card.Title>{value.title}</Card.Title>
-                <Card.Text>{value.desc}</Card.Text>
-                <Card.Text>Duración: {value.time} horas</Card.Text>
-                <Button variant="primary">Leer más</Button>
+                {/* Muestra el texto completo solo si la tarjeta está expandida */}
+                {expandedCards[index] ? (
+                  <div>
+                    <Card.Text>{value.desc}</Card.Text>
+                    <Card.Text>Duración: {value.time} horas</Card.Text>
+                  </div>
+                ) : null}
+                {/* Botón para alternar la expansión de la tarjeta */}
+                <Button
+                  variant="primary"
+                  onClick={() => toggleCardExpansion(index)}
+                >
+                  {expandedCards[index] ? "Leer menos" : "Leer más"}
+                </Button>
               </Card.Body>
             </Card>
           </Col>
@@ -51,3 +64,6 @@ const CoursCard = () => {
 };
 
 export default CoursCard;
+
+
+
