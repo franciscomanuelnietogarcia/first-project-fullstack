@@ -80,4 +80,5 @@ For the future, we would like to be able to add images to visually complement th
 
 ## Authors 👨‍💻👩‍💻
 | [<img src="https://avatars.githubusercontent.com/u/132567624?v=4" width=100><br><sub>Francisco Manuel Nieto</sub>](https://github.com/franciscomanuelnietogarcia) | [<img src="https://avatars.githubusercontent.com/u/132609974?v=4" width=100><br><sub>Celia Gil</sub>](https://github.com/CeliaGilPrieto) | [<img src="https://avatars.githubusercontent.com/u/132560447?v=4" width=100><br><sub>Viacheslav Fitlin</sub>](https://github.com/Slavafit) | [<img src="https://avatars.githubusercontent.com/u/132651796?v=4" width=100><br><sub>Christian Jaiki</sub>](https://github.com/ChristianJaiki12) |
+[<img src="https://avatars.githubusercontent.com/u/132651253?v=4" width=100><br><sub>Rodrigo Alejandro Muñóz Gonzalez </sub>](https://github.com/Rodrialemu)
 | :---: | :---: | :---: | :---: |
