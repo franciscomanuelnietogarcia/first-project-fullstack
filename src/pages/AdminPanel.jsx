@@ -67,7 +67,7 @@ function CoursList() {
     try {
       const courseIdToEdit = Coursedata[editCourseIndex].id; // Assuming each course has an "id" field
       await axios.put(
-        `http://localhost:5000/course/${courseIdToEdit}`,
+        `http://localhost:5000/courses/${courseIdToEdit}`,
         editedCourse
       );
       const updatedCourses = [...Coursedata];
@@ -75,14 +75,14 @@ function CoursList() {
       setCoursedata(updatedCourses);
       handleEditModalClose();
     } catch (error) {
-      console.error("Error saving edited course:", error);
+      console.error("Error saving edited courses:", error);
     }
   };
 
   //отображение карточек курсов - mostrar tarjetitos
   useEffect(() => {
     axios
-      .get("http://localhost:5000/course")
+      .get("http://localhost:5000/courses")
       .then((response) => {
         setCoursedata(response.data);
         setLoading(false);
@@ -105,7 +105,7 @@ function CoursList() {
   const handleAddCourse = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/course",
+        "http://localhost:5000/courses",
         newCourse
       );
       const addedCourse = response.data;
@@ -113,7 +113,7 @@ function CoursList() {
       setNewCourse({ id, title: "", desc: "", price: "", time: "", cover: "" });
       setShowAddModal(false);
     } catch (error) {
-      console.error("Error adding course:", error);
+      console.error("Error adding courses:", error);
     }
   };
   //модальное окно для удаления карточки
@@ -140,12 +140,12 @@ function CoursList() {
   const handleDeleteCourse = async (index) => {
     try {
       const courseIdToDelete = Coursedata[index].id; // Assuming each course has an "id" field
-      await axios.delete(`http://localhost:5000/course/${courseIdToDelete}`);
+      await axios.delete(`http://localhost:5000/courses/${courseIdToDelete}`);
       const updatedCourses = [...Coursedata];
       updatedCourses.splice(index, 1);
       setCoursedata(updatedCourses);
     } catch (error) {
-      console.error("Error deleting course:", error);
+      console.error("Error deleting courses:", error);
     }
   };
 
