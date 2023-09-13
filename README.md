@@ -9,6 +9,7 @@ This project aimed to create a database and a REST API. Its goal is to develop a
 
 ## Stacks 🖥️
 ● Microsoft Visual Studio 2022 <br>
+● Visual Studio Code 2022 <br>
 ● SQL Server <br>
 ● C# <br>
 ● Swagger <br>
