@@ -31,14 +31,16 @@ This project aimed to create a database and a REST API. Its goal is to develop a
 
 ## Installation Process ⬆️
 
-1. Clone the GitHub repository: https://github.com/franciscomanuelnietogarcia/first-project-fullstack.git
-2. Open the file using Microsoft Visual Studio 2022.
-3. Open View/Server Explorer and add the connection to your computer using SQL Server.
-4. In appsettings.json, add your SQL Server connection under "ServiceContext". Obtain information from properties.
-5. Compile the code from Microsoft Visual Studio 2022.
-6. Once installed, in Swagger, to add content, you need to enter the Administrator 1 query: Username (Equipo 2) and password (BootCamp).
-7. Create, modify, and delete content in Swagger.
-8. View the stored data in the SQL Server tables.
+1. Clone front-end from GitHub repository: https://github.com/franciscomanuelnietogarcia/first-project-fullstack.git
+2. Clone back-end from GitHub repository: https://github.com/franciscomanuelnietogarcia/fpfs-backend
+3. Open the file using  Visual Studio Code to open the front-end repository.
+4. Open the file using Microsoft Visual Studio 2022 to open the back-end repository.
+5. Open View/Server Explorer and add the connection to your computer using SQL Server.
+6. In appsettings.json, add your SQL Server connection under "ServiceContext". Obtain information from properties.
+7. Compile the code from Microsoft Visual Studio 2022.
+8. Once installed, in Swagger, to add content, you need to enter the Administrator 1 query: Username (Equipo 2) and password (BootCamp).
+9. Create, modify, and delete content in Swagger.
+10. View the stored data in the SQL Server tables.
 
 
 ## File Structure 📁
