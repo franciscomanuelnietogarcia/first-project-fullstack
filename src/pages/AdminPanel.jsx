@@ -159,13 +159,13 @@ function CoursList() {
 
   return (
     <Container className="registrar">
-      <h1>Gestión de courses</h1>
+      <h1>Gestión de cursos</h1>
       <Button
         className="mt-4 text-center mx-auto d-block"
         variant="primary"
         onClick={handleAddModalShow}
       >
-        Añadir nuevo courso
+        Añadir nuevo curso
       </Button>
       <Row className="d-flex justify-content-center">
         {Coursedata.map((value, index) => (

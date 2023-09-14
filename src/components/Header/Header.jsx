@@ -31,7 +31,7 @@ const Header = () => {
               Inicio
             </Nav.Link>
             <Nav.Link as={NavLink} to="/Courses" className="text-black" activeClassName="active-link">
-              Courses
+              Cursos
             </Nav.Link>
             <Nav.Link as={NavLink} to="/Contactos" className="text-black" activeClassName="active-link">
               Sobre nosotros
