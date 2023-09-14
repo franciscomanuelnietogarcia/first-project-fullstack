@@ -4,7 +4,7 @@
 
 ## Project Description 🚀
 
-This project aimed to create a database and a REST API. Its goal is to develop a comprehensive management system that facilitates interaction between suppliers and users/customers. Suppliers will be able to query, add, modify, and delete product records in their catalog, as well as manage customer data to whom they provide services. Additionally, they can check product stock and filter products by brands. Brand management will also be available. On the other hand, customers will have the ability to place and view their orders through the Swagger interface. Suppliers, in turn, will be able to access placed orders and update their status to mark them as delivered and paid. The system will enable a smooth and efficient interaction between suppliers and customers, enhancing service quality and optimizing inventory and order management processes.
+This project aimed to create a fully functional e-commerce platform that includes both Frontend and Backend components. In this e-commerce system, users should be able to view, purchase, and modify or delete their orders. Only the admin has the privilege to add new courses, modify them, and remove them. Our e-commerce platform is centered around a page featuring programming courses for beginners. To make purchases, users need to register, and once the purchase is completed, the courses will be reflected in their user profile. There, users can access the course materials, including videos created by our instructors.
 
 
 ## Stacks 🖥️
