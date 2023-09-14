@@ -78,6 +78,13 @@ The "Program" refers to the entry point of the application. In the context of an
 ## Next Steps 🔜
 For the future, we would like to be able to add images to visually complement the products added. It would also be interesting to differentiate between types of customers/users, whether they are individuals or businesses/companies. Allowing users to create a profile to access various promotions or discounts would be beneficial as well. Similarly, we aim to configure the SQL Server to send purchase confirmations to users via email. Lastly, we plan to work on the front-end to create a web page that replaces the Swagger interface and link it with the database.
 
+## Methodology
+Scrum Methodology:
+Scrum is a framework within the Agile methodology that is used for managing and delivering complex projects, primarily in software development. Scrum emphasizes iterative and incremental development, with a strong focus on collaboration, transparency, and adaptability. In Scrum, work is organized into time-boxed iterations called "sprints," and teams work in short, focused cycles to deliver potentially shippable increments of the product. Scrum also defines specific roles (such as Scrum Master, Product Owner, and Development Team) and ceremonies (like Daily Standups, Sprint Planning, Sprint Review, and Sprint Retrospective) to structure the development process.
+
+Mob Programming:
+Mob Programming is a software development technique where a group of people, typically the entire development team, work together on the same code or task at the same time. In Mob Programming, one person (the "driver") writes code on a computer while the rest of the team actively participates by discussing, reviewing, suggesting improvements, and providing real-time feedback. The team frequently rotates the driver role to ensure that everyone has a chance to contribute their ideas and expertise. Mob Programming promotes collaboration, knowledge sharing, and collective problem-solving.
+
 ## Authors 👨‍💻👩‍💻
 <br>Francisco Manuel Nieto https://github.com/franciscomanuelnietogarcia</br>
  <br>Celia Gil Prieto https://github.com/CeliaGilPrieto</br>
