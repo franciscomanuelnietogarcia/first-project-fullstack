@@ -3,8 +3,6 @@ import { Form, Button, Col, Modal, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../assets/images/logo.png";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 import "./Registrar.css";
 
 const Entrar = () => {

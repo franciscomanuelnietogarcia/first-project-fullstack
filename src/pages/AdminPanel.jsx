@@ -159,7 +159,6 @@ function CoursList() {
 
   return (
     <Container className="registrar">
-      <Header />
       <h1>Gestión de courses</h1>
       <Button
         className="mt-4 text-center mx-auto d-block"

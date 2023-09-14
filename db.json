@@ -16,9 +16,9 @@
     },
     {
       "id": "V5tVSF6",
-      "name": "Celia",
+      "name": "Christiann",
       "email": "celia7septiembre@gmail",
-      "password": "1qazxsw2",
+      "password": "Iangianlucca",
       "role": "User"
     },
     {
@@ -102,51 +102,51 @@
   "courses": [
     {
       "id": 1,
-      "title": "HTML, CSS desde cero",
-      "desc": "lorem",
-      "price": "20",
-      "time": "10",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof1_vpyjmj.jpg"
+      "title": "HTML",
+      "desc": "Curso de HTML desde cero para principiantes",
+      "price": "100",
+      "time": "300",
+      "cover": "https://res.cloudinary.com/dp7lr71t8/image/upload/v1694641392/css_kpjfhn.png"
     },
     {
       "id": 2,
-      "title": "JavaScript desde cero",
-      "desc": "lorem",
-      "price": "20",
-      "time": "10",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof5_skji9z.jpg"
+      "title": "CSS",
+      "desc": "Curso de CSS desde cero para principiantes",
+      "price": "100",
+      "time": "100",
+      "cover": "https://res.cloudinary.com/dp7lr71t8/image/upload/v1694641392/html_beebrg.png"
     },
     {
       "id": 3,
-      "title": "Qué es React?",
-      "desc": "lorem",
-      "price": "25",
-      "time": "12",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof6_cfimkt.jpg"
+      "title": "C#",
+      "desc": "Curso de C# desde cero para principiantes",
+      "price": "150",
+      "time": "300",
+      "cover": "https://res.cloudinary.com/dp7lr71t8/image/upload/v1694641392/Cshart_ctcyar.png"
     },
     {
       "id": 4,
-      "title": "C# ",
-      "desc": "Lorem",
-      "price": "60",
-      "time": "30",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof2_aijttj.jpg"
+      "title": "JavaScript ",
+      "desc": "Curso de JavaScript desde cero para principiantes",
+      "price": "300",
+      "time": "400",
+      "cover": "https://res.cloudinary.com/dp7lr71t8/image/upload/v1694641392/javasscri_b9da1a.png"
     },
     {
       "id": 5,
-      "title": "Java",
-      "desc": "lorem",
-      "price": "100",
-      "time": "60",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof3_vwpigo.jpg"
+      "title": "PHP",
+      "desc": "Curso de PHP desde cero para principiantes",
+      "price": "300",
+      "time": "300",
+      "cover": "https://res.cloudinary.com/dp7lr71t8/image/upload/v1694641392/php_blv7ds.png"
     },
     {
       "id": 6,
-      "title": ".Net",
-      "desc": "bla bla",
+      "title": "PHYTON",
+      "desc": "Curso de Phyton desde cero para principiantes",
       "price": "200",
-      "time": "40",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg"
+      "time": "300",
+      "cover": "https://res.cloudinary.com/dp7lr71t8/image/upload/v1694641392/phyton_cavr6l.jpg"
     }
   ]
 }
