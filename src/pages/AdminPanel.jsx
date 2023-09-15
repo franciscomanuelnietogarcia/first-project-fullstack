@@ -16,7 +16,6 @@ import Header from "../components/Header/Header";
 import AddModalCours from "../components/Modales/AddModalCours";
 import DeleteModalCours from "../components/Modales/DeleteModalCours";
 import EditModalCours from "../components/Modales/EditModalCours";
-
 import "./Registrar.css";
 
 function CoursList() {

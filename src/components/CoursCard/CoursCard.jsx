@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { fetchCards } from "../../Service/Api";
+import { useCart } from "../Cart/CartContext";
 import "./CoursCard.css";
-
 
 const CoursCard = () => {
   const [courses, setData] = useState([]);
@@ -15,6 +15,11 @@ const CoursCard = () => {
     getData();
   }, []);
 
+  const addToCart = (course) => {
+    // Здесь можно выполнить любую логику, связанную с добавлением в корзину
+    console.log('Adding to cart:', course);
+  };
+  
   return (
     <Container fluid className="min-vh-100 CoursCard-block">
             <Row className="align-items-center ms-5">
@@ -40,7 +45,7 @@ const CoursCard = () => {
                 <Card.Title>{value.title}</Card.Title>
                 <Card.Text>{value.desc}</Card.Text>
                 <Card.Text>Duración: {value.time} horas</Card.Text>
-                <Button variant="primary">Leer más</Button>
+                <Button variant="primary" onClick={() => addToCart(value)}>Leer más</Button>
               </Card.Body>
             </Card>
           </Col>

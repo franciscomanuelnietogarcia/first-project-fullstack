@@ -3,7 +3,7 @@ import { Form, Row, Col, Button, Toast, Container } from "react-bootstrap";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import "./Registrar.css";
-import logo from "../assets/images/logo.png";
+// import logo from "../assets/images/logo.png";
 import axios from "axios";
 import ReCAPTCHA from 'react-google-recaptcha';
 

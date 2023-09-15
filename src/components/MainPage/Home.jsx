@@ -6,8 +6,10 @@ import CoursCard from "../CoursCard/CoursCard";
 import Footer from "../Footer/Footer";
 import background from "../../assets/images/main-pic.png";
 import "./Home.css";
+import TopButton from "../TopButton/TopButton"
 
 const Home = () => {
+
   return (
     <>
     <Container >
@@ -38,6 +40,7 @@ const Home = () => {
               <CoursCard />
             </Col>
           </Row>
+          <TopButton/>
         <Footer />
     </Container>
     </>

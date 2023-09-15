@@ -1,36 +1,21 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import {
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBCard,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardImage,
-  MDBBtn,
-  MDBBreadcrumb,
-  MDBBreadcrumbItem,
-  MDBProgress,
-  MDBProgressBar,
-  MDBIcon,
-  MDBListGroup,
-  MDBListGroupItem
-} from 'mdb-react-ui-kit';
-import Header from "../components/Header/Header";
-import "./PersonalArea.css"
+import {  MDBCol,  MDBContainer,  MDBRow,  MDBCard,  MDBCardText,  MDBCardBody,  MDBCardImage,  MDBBtn,
+  MDBProgress,  MDBProgressBar} from 'mdb-react-ui-kit';
+import Header from '../Header/Header';
+import Cart from '../Cart/Cart';
 
- 
-const  ProfilePage = () => {
-    const location = useLocation();
-    const user = location.state?.user;
-
+const ProfilePage = () => {
+  const location = useLocation();
+  const user = location.state?.user;
+  const [cart, setCart] = useState([]); // estado del carrito
+  console.log(cart);
 
   return (
     <section style={{ backgroundColor: '#eee' }}>
-        <Header />
+      <Header />
       <MDBContainer className="py-5">
-        <MDBRow>
+      <MDBRow>
           <MDBCol lg="4">
             <MDBCard className="mb-4">
               <MDBCardBody className="text-center">
@@ -44,43 +29,16 @@ const  ProfilePage = () => {
                 <p className="text-muted mb-4">Bay Area, San Francisco, CA</p>
                 <div className="d-flex justify-content-center mb-2">
                   <MDBBtn>Cambiar foto</MDBBtn>
-                  {/* <MDBBtn outline className="ms-1">Message</MDBBtn> */}
+                  <MDBBtn outline className="ms-1">Modificar datos</MDBBtn>
                 </div>
               </MDBCardBody>
             </MDBCard>
-
-            {/* <MDBCard className="mb-4 mb-lg-0">
-              <MDBCardBody className="p-0">
-                <MDBListGroup flush className="rounded-3">
-                  <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
-                    <MDBIcon fas icon="globe fa-lg text-warning" />
-                    <MDBCardText>https://mdbootstrap.com</MDBCardText>
-                  </MDBListGroupItem>
-                  <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
-                    <MDBIcon fab icon="github fa-lg" style={{ color: '#333333' }} />
-                    <MDBCardText>mdbootstrap</MDBCardText>
-                  </MDBListGroupItem>
-                  <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
-                    <MDBIcon fab icon="twitter fa-lg" style={{ color: '#55acee' }} />
-                    <MDBCardText>@mdbootstrap</MDBCardText>
-                  </MDBListGroupItem>
-                  <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
-                    <MDBIcon fab icon="instagram fa-lg" style={{ color: '#ac2bac' }} />
-                    <MDBCardText>mdbootstrap</MDBCardText>
-                  </MDBListGroupItem>
-                  <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
-                    <MDBIcon fab icon="facebook fa-lg" style={{ color: '#3b5998' }} />
-                    <MDBCardText>mdbootstrap</MDBCardText>
-                  </MDBListGroupItem>
-                </MDBListGroup>
-              </MDBCardBody>
-            </MDBCard> */}
           </MDBCol>
           <MDBCol lg="8">
             <MDBCard className="mb-4">
               <MDBCardBody>
-              {user && (
-          <>
+              {user ? (
+              <>
                 <MDBRow>
                   <MDBCol sm="3">
                     <MDBCardText>Full Name</MDBCardText>
@@ -107,11 +65,10 @@ const  ProfilePage = () => {
                     <MDBCardText className="text-muted">{user.password}</MDBCardText>
                   </MDBCol>
                 </MDBRow>
-                </>
-          )}
+              </>
+            ) : null }
               </MDBCardBody>
             </MDBCard>
-
             <MDBRow>
               <MDBCol md="6">
                 <MDBCard className="mb-4 mb-md-0">
@@ -131,9 +88,12 @@ const  ProfilePage = () => {
               </MDBCol>
             </MDBRow>
           </MDBCol>
-        </MDBRow>
+        </MDBRow>     
+            {/* Отображение содержимого корзины с передачей cart */}
+        <Cart cartItems={cart} />
       </MDBContainer>
     </section>
   );
-}
-export default  ProfilePage
+};
+
+export default ProfilePage;
