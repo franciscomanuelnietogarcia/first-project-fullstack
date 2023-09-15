@@ -7,3 +7,9 @@
   /*padding: 20px; /* Внутренний отступ для блока с карточками */
   /*margin-top: 20px; /* Отступ сверху */
 }
+
+.custom-card:hover {
+  transform: scale(1.10); /* Puedes ajustar el valor según tus preferencias */
+  transition: transform 0.3s ease; /* Añade una transición suave para el efecto */
+  /* Otros estilos personalizados aquí */
+}

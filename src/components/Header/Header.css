@@ -1,0 +1,3 @@
+.text-black:hover {
+    border-bottom: 2px solid black; /* Ancho y color de la línea de fondo */
+  }

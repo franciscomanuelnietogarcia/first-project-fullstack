@@ -34,7 +34,7 @@ const BasicCard = () => {
             md={6}
             className="d-flex flex-column align-items-center mb-4"
           >
-            <Card style={{ width: "18rem" }}>
+            <Card className="custom-card" style={{ width: "18rem" }}>
               <Card.Img
                 variant="top"
                 src={value.cover}
@@ -56,3 +56,4 @@ const BasicCard = () => {
 };
 
 export default BasicCard;
+

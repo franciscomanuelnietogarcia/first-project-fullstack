@@ -45,7 +45,7 @@ const EditModal = ({ show, onHide, onSubmit, editedCourse, setEditedCourse }) =>
               />
             </Form.Group>
             <Form.Group controlId="time">
-              <Form.Label>Ducarión</Form.Label>
+              <Form.Label>Duración</Form.Label>
               <Form.Control
                 type="text"
                 rows={3}

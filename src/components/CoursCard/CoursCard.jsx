@@ -46,3 +46,9 @@ const CoursCard = () => {
 };
 
 export default CoursCard;
+
+
+
+
+
+
