@@ -27,6 +27,13 @@
       "email": "ramunozg@gmail.com",
       "password": "111",
       "role": "User"
+    },
+    {
+      "id": "R9tPIW5",
+      "name": "pedro perez",
+      "email": "pedro@gmail.com",
+      "password": "000",
+      "role": "User"
     }
   ],
   "teachers": [
@@ -144,17 +151,9 @@
       "id": 6,
       "title": "PHYTON",
       "desc": "Curso de Phyton desde cero para principiantes",
-      "price": "200",
-      "time": "300",
+      "price": "100",
+      "time": "450",
       "cover": "https://res.cloudinary.com/dp7lr71t8/image/upload/v1694641392/phyton_cavr6l.jpg"
-    },
-    {
-      "id": 7,
-      "cover": "https://media.istockphoto.com/id/1334906074/es/foto/dise%C3%B1ador-web-que-trabaja-con-varios-dispositivos.jpg?s=1024x1024&w=is&k=20&c=PQJifUEZYXNvk4tu00giB5LEEHPaqr343TyTIQGm8OA=",
-      "title": "Desarrollo Web",
-      "price": "54",
-      "time": "60",
-      "desc": "Curso de desarrollo Web desde cero"
     }
   ]
 }
