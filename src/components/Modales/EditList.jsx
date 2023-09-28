@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
-const EditModal = ({ show, onHide, onSubmit, selectedUser, setSelectedUser }) => {
+const EditModal = ({ show, onHide, onSubmit, selectedList, setSelectedList }) => {
   return (
     <Modal show={show} onHide={onHide}>
         <Modal.Header closeButton>
@@ -13,10 +13,10 @@ const EditModal = ({ show, onHide, onSubmit, selectedUser, setSelectedUser }) =>
               <Form.Label>Title</Form.Label>
               <Form.Control
                 type="text"
-                value={selectedUser ? selectedUser.title : ""}
+                value={selectedList ? selectedList.title : ""}
                 onChange={(e) =>
-                  setSelectedUser({
-                    ...selectedUser,
+                  setSelectedList({
+                    ...selectedList,
                     title: e.target.value,
                   })
                 }
@@ -26,10 +26,10 @@ const EditModal = ({ show, onHide, onSubmit, selectedUser, setSelectedUser }) =>
               <Form.Label>Desc</Form.Label>
               <Form.Control
                 type="text"
-                value={selectedUser ? selectedUser.desc : ""}
+                value={selectedList ? selectedList.desc : ""}
                 onChange={(e) =>
-                  setSelectedUser({
-                    ...selectedUser,
+                  setSelectedList({
+                    ...selectedList,
                     desc: e.target.value,
                   })
                 }
@@ -39,10 +39,10 @@ const EditModal = ({ show, onHide, onSubmit, selectedUser, setSelectedUser }) =>
               <Form.Label>Cover</Form.Label>
               <Form.Control
                 type="text"
-                value={selectedUser ? selectedUser.cover : ""}
+                value={selectedList ? selectedList.cover : ""}
                 onChange={(e) =>
-                  setSelectedUser({
-                    ...selectedUser,
+                  setSelectedList({
+                    ...selectedList,
                     cover: e.target.value,
                   })
                 }
@@ -52,10 +52,10 @@ const EditModal = ({ show, onHide, onSubmit, selectedUser, setSelectedUser }) =>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onHide}>
-            Cerrar
+            Close
           </Button>
           <Button variant="primary" onClick={onSubmit}>
-            Guardar
+            Save
           </Button>
         </Modal.Footer>
       </Modal>

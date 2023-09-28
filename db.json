@@ -34,75 +34,61 @@
       "email": "vg.fitlin@gmail.com",
       "password": "123",
       "role": "User"
+    },
+    {
+      "id": "v0DcQoz",
+      "name": "test",
+      "email": "qwert@er",
+      "password": "123456",
+      "role": "User"
     }
   ],
-  "course": [
+  "songs": [
     {
-      "id": 1,
-      "title": "HTML, CSS desde cero",
-      "desc": "loremцуцуй",
-      "price": "20",
-      "time": "10",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof1_vpyjmj.jpg"
+      "id": "1",
+      "artist": "Serebro",
+      "track": "Mama Luba",
+      "year": "2019",
+      "fileUrl": "https://res.cloudinary.com/dj5frqeln/video/upload/v1695371735/serebro_-_mama-lyuba_zeyjnm.mp3",
+      "coverUrl": "https://res.cloudinary.com/dj5frqeln/image/upload/v1695371951/1549797936_screenshot_1_teoaib.png",
+      "category": "pop"
     },
     {
-      "id": 2,
-      "title": "JavaScript desde cero",
-      "desc": "lorem",
-      "price": "20",
-      "time": "10",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof5_skji9z.jpg"
+      "id": "2",
+      "artist": "Леша Сивик",
+      "track": "Малиновый свет",
+      "year": "2017",
+      "fileUrl": "https://res.cloudinary.com/dj5frqeln/video/upload/v1695371684/lesha-svik-malinovyy-svet_ohlxig.mp3",
+      "coverUrl": "https://res.cloudinary.com/dj5frqeln/image/upload/v1695372020/9fa6c1cdaafa886cb48d2e768a936891_mtfn7v.png",
+      "category": "pop"
     },
     {
-      "id": 3,
-      "title": "Qué es React?",
-      "desc": "lorem",
-      "price": "25",
-      "time": "12",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof6_cfimkt.jpg"
-    },
-    {
-      "id": 4,
-      "title": "C# ",
-      "desc": "Lorem",
-      "price": "60",
-      "time": "30",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof2_aijttj.jpg"
-    },
-    {
-      "id": 5,
-      "title": "Java",
-      "desc": "lorem",
-      "price": "100",
-      "time": "60",
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956864/Prof3_vwpigo.jpg"
-    },
-    {
-      "id": 6,
-      "cover": "https://res.cloudinary.com/dj5frqeln/image/upload/v1692956863/Prof4_gc8mm2.jpg",
-      "title": "no se",
-      "price": "10",
-      "time": "45",
-      "desc": "bla"
+      "id": "3",
+      "artist": "Ленинград",
+      "track": "Не Париж",
+      "year": "2018",
+      "fileUrl": "https://res.cloudinary.com/dj5frqeln/video/upload/v1695392832/leningrad_-_ne-parizh_tiu9ic.mp3",
+      "coverUrl": "https://res.cloudinary.com/dj5frqeln/image/upload/v1695392801/maxresdefault_gbkp3n.jpg",
+      "category": "pop"
     }
   ],
-  "advantages": [
+  "lists": [
     {
       "id": 1,
-      "title": "Orientación práctica",
-      "desc": "Somos conscientes de que la práctica desempeña un papel importante en el aprendizaje de la programación. Por eso nuestros cursos hacen hincapié en la aplicación práctica de los conocimientos. Te esperan proyectos reales, tareas interactivas y deberes, que te ayudarán a consolidar tus conocimientos y a aplicarlos con confianza en la práctica.",
+      "title": "Orientación prácticas",
+      "desc": "test",
       "cover": ""
     },
     {
       "id": 2,
       "title": "Modo de aprendizaje flexible",
-      "desc": "Con CourDevs, puede estudiar cuando más le convenga. Puede elegir el horario que más le convenga, incluidos los fines de semana; usted decide qué ritmo de estudio le resulta más cómodo. Todos los materiales de las lecciones, los vídeos y las tareas están disponibles las 24 horas del día, los 7 días de la semana, para ayudarle a aprovechar al máximo su tiempo.",
+      "desc": "test",
       "cover": ""
     },
     {
       "id": 3,
       "title": "Profesores profesionales, Resultados reales",
-      "desc": "Estamos orgullosos de nuestro equipo de tutores, que no sólo tienen un profundo conocimiento del desarrollo de sitios web, sino que también transmiten con éxito su experiencia a los estudiantes. Gracias a su pericia y a sus habilidades docentes, podrás conseguir resultados reales en el dominio de este fascinante campo.",
+      "desc": "test",
       "cover": ""
     }
   ]

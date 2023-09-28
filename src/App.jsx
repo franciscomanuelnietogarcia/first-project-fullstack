@@ -4,28 +4,23 @@ import {
 import "./App.css";
 import Home from "./components/MainPage/Home";
 import Contactos from "./pages/Contactos";
-import Entrar from "./pages/Entrar";
-import Registrar from "./pages/Registrar";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 import AdminPanel from "./pages/AdminPanel";
 import PersonalArea from "./components/PersonalArea/PersonalArea"
 //import { Component } from "react";
-//import { Switch } from "@prismane/core/*";
-import { CartProvider } from "./components/Cart/CartContext";
 
-export const useRoutes = () => {
-  const routes = useRoutes()
+export const App = () => {
   return (
       <Router>
-        <CartProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Contactos" element={<Contactos />} />
-            <Route path="/Entrar" element={<Entrar />} />
-            <Route path="/Registrar" element={<Registrar />} />
+            <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/SignUp" element={<SignUp />} />
             <Route path="/AdminPanel" element={<AdminPanel />} />
             <Route path="/PersonalArea" element={<PersonalArea />} />
           </Routes>
-        </CartProvider>
       </Router>
   );
 };

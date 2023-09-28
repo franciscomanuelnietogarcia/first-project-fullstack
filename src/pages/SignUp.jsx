@@ -3,7 +3,6 @@ import { Form, Row, Col, Button, Toast, Container } from "react-bootstrap";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import "./Registrar.css";
-// import logo from "../assets/images/logo.png";
 import axios from "axios";
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -48,7 +47,8 @@ function Registrar() {
       try {
         const response = await axios.post(
           "http://localhost:5000/users",
-          formData
+          formData,
+          console.log(formData)
         );
         const newUserData = response.data;
         console.log("Respuesta del servidor:", newUserData);
@@ -77,7 +77,7 @@ function Registrar() {
   return (
     <Container className="registrar">
       <Header />
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form validated={validated} onSubmit={handleSubmit}>
 
           <Row className="mb-1 mt-4 d-flex justify-content-center">
             <Form.Group as={Col} md="3" controlId="validationCustom01">
@@ -159,7 +159,7 @@ function Registrar() {
             onChange={(value) => setCaptchaValue(value)}
           />
           <Button type="submit" className="mt-4 text-center mx-auto d-block">
-            Entregar
+            Send
           </Button>
         </Form>
         <Toast

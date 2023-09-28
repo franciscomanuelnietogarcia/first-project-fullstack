@@ -1,9 +1,0 @@
-.colored-line {
-  border-top: 4px solid #e94560; /* Цвет линии */
-  margin: 10px 0; /* Отступы сверху и снизу линии */
-}
-.card-block {
-  background-color: #3a4264; /* Цвет фона */
-  /*padding: 20px; /* Внутренний отступ для блока с карточками */
-  /*margin-top: 20px; /* Отступ сверху */
-}

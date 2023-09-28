@@ -15,10 +15,10 @@ export async function fetchData(url) {
   }
 }
 
-export async function fetchAdvantages() {
-  return fetchData("http://localhost:5000/advantages");
+export async function fetchLists() {
+  return fetchData("http://localhost:5000/lists");
 }
 
-export async function fetchCards() {
-  return fetchData("http://localhost:5000/course");
+export async function fetchSongs() {
+  return fetchData("http://localhost:5000/songs");
 }

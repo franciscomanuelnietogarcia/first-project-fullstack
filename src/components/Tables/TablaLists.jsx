@@ -1,49 +1,49 @@
 import React, { useState, useEffect } from "react";
 import { Container, Table, Button, } from "react-bootstrap";
 import axios from "axios";
-import EditAdvan from "../Modales/EditAdvan"
+import EditList from "../Modales/EditList"
 
-const AdvantagesManagement = () => {
-  const [advantages, setUsers] = useState([]);
-  const [selectedUser, setSelectedUser] = useState(null);
+const ListManagement = () => {
+  const [list, setCategory] = useState([]);
+  const [selectedList, setSelectedList] = useState(null);
   const [showEditModal, setShowEditModal] = useState(false);
 
   useEffect(() => {
-    fetchUsers();
+    fetchLists();
   }, []);
 
-  const fetchUsers = async () => {
+  const fetchLists = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/advantages");
-      setUsers(response.data);
+      const response = await axios.get("http://localhost:5000/lists");
+      setCategory(response.data);
     } catch (error) {
-      console.error("Error fetching advantage:", error);
+      console.error("Error fetching lists:", error);
     }
   };
 
   const handleEditUser = (user) => {
-    setSelectedUser(user);
+    setSelectedList(user);
     setShowEditModal(true);
   };
 
   const handleCloseEditModal = () => {
-    setSelectedUser(null);
+    setSelectedList(null);
     setShowEditModal(false);
   };
 
-  const handleSaveUser = async () => {
+  const handleSaveList = async () => {
     try {
-      await axios.put(`http://localhost:5000/advantages/${selectedUser.id}`, selectedUser);
-      fetchUsers();
+      await axios.put(`http://localhost:5000/lists/${selectedList.id}`, selectedList);
+      fetchLists();
       handleCloseEditModal();
     } catch (error) {
-      console.error("Error updating user:", error);
+      console.error("Error updating list:", error);
     }
   };
 
   return (
     <Container border="primary">
-      <h1>Gestión de ventajas</h1>
+      <h1>List control</h1>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -55,7 +55,7 @@ const AdvantagesManagement = () => {
           </tr>
         </thead>
         <tbody>
-          {advantages.map((user) => (
+          {list.map((user) => (
             <tr key={user.id}>
               <td>{user.id}</td>
               <td>{user.title}</td>
@@ -69,14 +69,14 @@ const AdvantagesManagement = () => {
         </tbody>
       </Table>
 
-      <EditAdvan show={showEditModal}
+      <EditList show={showEditModal}
        onHide={handleCloseEditModal}
-       onSubmit={handleSaveUser}
-       selectedUser={selectedUser}
-       setSelectedUser={setSelectedUser}
+       onSubmit={handleSaveList}
+       selectedList={selectedList}
+       setSelectedList={setSelectedList}
        />
        </Container>
   );
 };
 
-export default AdvantagesManagement;
+export default ListManagement;

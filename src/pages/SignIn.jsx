@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../assets/images/logo.png";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
 import "./Registrar.css";
 
 const Entrar = () => {
@@ -86,15 +86,15 @@ const Entrar = () => {
           <img
             className="mb-4 text-center mx-auto d-block"
             src={logo}
-            alt="logo CoursDev"
-            height="72"
+            alt="logo"
+            height="64"
           />
           <Form.Group as={Col} className="mb-3" controlId="formBasicEmail">
             <Form.Label className="fs-4">Email</Form.Label>
             <Form.Control
               required
               type="email"
-              placeholder="Ingresa email"
+              placeholder="Enter email"
               name="email"
               value={loginData.email}
               onChange={handleChange}
@@ -104,11 +104,11 @@ const Entrar = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label className="fs-4">Contraseña</Form.Label>
+            <Form.Label className="fs-4">Password</Form.Label>
             <Form.Control
               required
               type="password"
-              placeholder="Ingresa contraseña"
+              placeholder="Enter password"
               name="password"
               value={loginData.password}
               onChange={handleChange}
@@ -118,7 +118,7 @@ const Entrar = () => {
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check
               type="checkbox"
-              label="Acuérdate de mí"
+              label="Remember Me"
               name="rememberMe"
               checked={loginData.rememberMe}
               onChange={handleChange}
@@ -128,24 +128,24 @@ const Entrar = () => {
             type="submit"
             className="text-center mx-auto d-block"
           >
-            Entrar
+            Sign-In
           </Button>
-          <p className="mt-5 mb-3 text-center text-muted"> CoursDev © 2023</p>
+          <p className="mt-5 mb-3 text-center text-muted"> Music cloud © 2023</p>
         </Form>
         <Modal show={loginError !== ""} onHide={() => setLoginError("")}>
           <Modal.Header closeButton>
-            <Modal.Title>Error de acceso</Modal.Title>
+            <Modal.Title>Access error</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <p className="text-danger">{loginError}</p>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" onClick={() => setLoginError("")}>
-              Cerrar
+              Close
             </Button>
           </Modal.Footer>
         </Modal>
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   );
 };

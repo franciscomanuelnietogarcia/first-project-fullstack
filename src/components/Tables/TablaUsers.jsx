@@ -43,7 +43,7 @@ const UserManagement = () => {
 
   return (
     <Container border="primary">
-      <h1>Gestión de usuarios</h1>
+      <h1>User control</h1>
       <Table striped bordered hover>
         <thead>
           <tr>

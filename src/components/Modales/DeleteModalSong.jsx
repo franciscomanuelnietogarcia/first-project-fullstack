@@ -5,17 +5,17 @@ const DeleteConfirmationModal = ({ show, onHide, onConfirm }) => {
   return (
     <Modal show={show} onHide={onHide}>
       <Modal.Header closeButton>
-        <Modal.Title>Eliminar tarjetita</Modal.Title>
+        <Modal.Title>Delete song</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p>¿Estás seguro de que deseas eliminar este curso?</p>
+        <p>Confirm delete</p>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={onHide}>
-          Cancelar
+          Cancel
         </Button>
         <Button variant="danger" onClick={onConfirm}>
-          Hazlo
+          Ok
         </Button>
       </Modal.Footer>
     </Modal>

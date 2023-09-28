@@ -1,5 +1,5 @@
 .footer {
-    background-color: #3a4264;
+    background-color: #49506b;
     color: #fff;
   }
   .container-grid {
@@ -8,8 +8,8 @@
   }
 
   .footer p {
-    font-size: 14px;
-    font-weight: 200;
+    font-size: 10px;
+    font-weight: 100;
     opacity: 0.5;
     margin-bottom: 20px;
   }

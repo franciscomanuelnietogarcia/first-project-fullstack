@@ -10,33 +10,34 @@ import {
 import axios from "axios";
 import "./AdminPanel.css";
 import TablaUsers from "../components/Tables/TablaUsers";
-import TablaAdvan from "../components/Tables/TablaAdvan";
+import TablaLists from "../components/Tables/TablaLists";
 import TopButton from "../components/TopButton/TopButton";
 import Header from "../components/Header/Header";
-import AddModalCours from "../components/Modales/AddModalCours";
-import DeleteModalCours from "../components/Modales/DeleteModalCours";
-import EditModalCours from "../components/Modales/EditModalCours";
+import AddModalSong from "../components/Modales/AddModalSong";
+import DeleteModalSong from "../components/Modales/DeleteModalSong";
+import EditModalSong from "../components/Modales/EditModalSong";
 import "./Registrar.css";
 
-function CoursList() {
+function SongsList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-  const [Coursedata, setCoursedata] = useState([]);
-  //модальное окно добавления -ventana modal añadir
+  const [Songdata, setSongdata] = useState([]);
+  //модальное окно добавления
   const [showAddModal, setShowAddModal] = useState(false);
-  const [newCourse, setNewCourse] = useState({
+  const [newSong, setNewSong] = useState({
     id: "",
-    cover: "",
-    title: "",
-    price: "",
-    time: "",
-    desc: "",
+    artist: "",
+    track: "",
+    year: "",
+    fileUrl: "",
+    coverUrl: "",
+    category: "",
   });
-  //модальное окно редактирования -ventana modal modificar
+  //модальное окно редактирования
   const [showEditModal, setShowEditModal] = useState(false);
-  const [editCourseIndex, setEditCourseIndex] = useState(null);
-  const [editedCourse, setEditedCourse] = useState({
+  const [editSongIndex, seteditSongIndex] = useState(null);
+  const [editedSong, setEditedSong] = useState({
     cover: "",
     title: "",
     price: "",
@@ -44,53 +45,56 @@ function CoursList() {
     desc: "",
   });
 
-  const handleEditCourse = (index) => {
-    setEditCourseIndex(index);
-    setEditedCourse(Coursedata[index]);
+  const handleEditSong = (index) => {
+    seteditSongIndex(index);
+    setEditedSong(Songdata[index]);
     setShowEditModal(true);
   };
 
   const handleEditModalClose = () => {
     setShowEditModal(false);
-    setEditCourseIndex(null);
-    setEditedCourse({
-      cover: "",
-      title: "",
-      price: "",
-      time: "",
-      desc: "",
+    seteditSongIndex(null);
+    setEditedSong({
+      artist: "",
+      track: "",
+      year: "",
+      fileUrl: "",
+      coverUrl: "",
+      category: "",
     });
   };
-
-  const handleSaveEditedCourse = async () => {
+  //метод редактирования
+  const handleSaveEditedSong = async () => {
     try {
-      const courseIdToEdit = Coursedata[editCourseIndex].id; // Assuming each course has an "id" field
+      const songIdToEdit = Songdata[editSongIndex].id; // Assuming each song has an "id" field
       await axios.put(
-        `http://localhost:5000/course/${courseIdToEdit}`,
-        editedCourse
+        `http://localhost:5000/songs/${songIdToEdit}`,
+        editedSong
       );
-      const updatedCourses = [...Coursedata];
-      updatedCourses[editCourseIndex] = editedCourse;
-      setCoursedata(updatedCourses);
+      const updatedSongs = [...Songdata];
+      updatedSongs[editSongIndex] = editedSong;
+      setSongdata(updatedSongs);
       handleEditModalClose();
     } catch (error) {
-      console.error("Error saving edited course:", error);
+      console.error("Error saving edited songs:", error);
     }
   };
 
   //отображение карточек курсов - mostrar tarjetitos
   useEffect(() => {
     axios
-      .get("http://localhost:5000/course")
+      .get("http://localhost:5000/songs")
       .then((response) => {
-        setCoursedata(response.data);
-        setLoading(false);
+        setSongdata(response.data);
+        setLoading(false);            //отображение ожидания загрузки
       })
       .catch((error) => {
         setError(error);
-        setLoading(false);
+        setLoading(false);            //ошибка загрузки
       });
   }, []);
+
+
   //открытие -
   const handleAddModalShow = () => {
     setShowAddModal(true);
@@ -101,53 +105,55 @@ function CoursList() {
   };
 
   //метод post для добавления новой карточки
-  const handleAddCourse = async () => {
+  const handleAddSong = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/course",
-        newCourse
+        "http://localhost:5000/songs",
+        newSong
       );
-      const addedCourse = response.data;
-      setCoursedata([...Coursedata, addedCourse]);
-      setNewCourse({ id, title: "", desc: "", price: "", time: "", cover: "" });
+      const addedSong = response.data;
+      setSongdata([...Songdata, addedSong]);
+      setNewSong({ id, artist: "", track: "", year: "", fileUrl: "", coverUrl: "", category: "" });
       setShowAddModal(false);
     } catch (error) {
-      console.error("Error adding course:", error);
+      console.error("Error adding songs:", error);
     }
   };
+
   //модальное окно для удаления карточки
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
-  const [courseToDeleteIndex, setCourseToDeleteIndex] = useState(null);
-
+  const [songToDeleteIndex, setSongToDeleteIndex] = useState(null);
+//показать модальное окно
   const handleDeleteConfirmationShow = (index) => {
-    setCourseToDeleteIndex(index);
+    setSongToDeleteIndex(index);
     setShowDeleteConfirmation(true);
   };
-
+//закрыть модальное окно
   const handleDeleteConfirmationClose = () => {
     setShowDeleteConfirmation(false);
-    setCourseToDeleteIndex(null);
+    setSongToDeleteIndex(null);
   };
-
-  const handleDeleteCourseConfirmed = () => {
-    if (courseToDeleteIndex !== null) {
-      handleDeleteCourse(courseToDeleteIndex);
+//подтверждение удаления
+  const handleDeleteSongConfirmed = () => {
+    if (songToDeleteIndex !== null) {
+      handleDeleteSong(songToDeleteIndex);
       handleDeleteConfirmationClose();
     }
   };
-
-  const handleDeleteCourse = async (index) => {
+  //метод удаления delete
+  const handleDeleteSong = async (index) => {
     try {
-      const courseIdToDelete = Coursedata[index].id; // Assuming each course has an "id" field
-      await axios.delete(`http://localhost:5000/course/${courseIdToDelete}`);
-      const updatedCourses = [...Coursedata];
-      updatedCourses.splice(index, 1);
-      setCoursedata(updatedCourses);
+      const songIdToDelete = Songdata[index].id; // удаления карточки по "id"
+      await axios.delete(`http://localhost:5000/songs/${songIdToDelete}`);
+      const updatedSongs = [...Songdata];
+      updatedSongs.splice(index, 1);
+      setSongdata(updatedSongs);
     } catch (error) {
-      console.error("Error deleting course:", error);
+      console.error("Error deleting songs:", error);
     }
   };
 
+  //блок ошибок загрузки
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -159,16 +165,16 @@ function CoursList() {
   return (
     <Container className="registrar">
       <Header />
-      <h1>Gestión de courses</h1>
+      <h1>Songs control</h1>
       <Button
         className="mt-4 text-center mx-auto d-block"
         variant="primary"
         onClick={handleAddModalShow}
-      >
-        Añadir nuevo courso
+        >
+        Add new
       </Button>
       <Row className="d-flex justify-content-center">
-        {Coursedata.map((value, index) => (
+        {Songdata.map((value, index) => (
           <Col key={index} xs={12} sm={6} md={4} lg={3} className="mt-3">
             <Card
               style={{
@@ -176,28 +182,29 @@ function CoursList() {
                 boxShadow: "0 5px 8px rgba(0, 0, 0, 0.5)",
               }}
             >
-              <Card.Img variant="top" src={value.cover} />
+              <Card.Img variant="top" src={value.coverUrl} />
               <Card.Body>
-                <Card.Title>{value.title}</Card.Title>
-                <Card.Text>{value.desc}</Card.Text>
+                <Card.Title>Artist: {value.artist}</Card.Title>
+                <Card.Text>Track: {value.track}</Card.Text>
+                <Card.Text>Year: {value.year}</Card.Text>
               </Card.Body>
               <ListGroup className="list-group-flush">
-                <ListGroup.Item>El precio: {value.price} €</ListGroup.Item>
-                <ListGroup.Item>Duración: {value.time} horas</ListGroup.Item>
+                <ListGroup.Item>FileUrl: {value.fileUrl}</ListGroup.Item>
+                <ListGroup.Item>Category: {value.category}</ListGroup.Item>
               </ListGroup>
               <Card.Body className="d-flex justify-content-between">
                 <Button
                   variant="warning"
                   className="me-5"
-                  onClick={() => handleEditCourse(index)}
+                  onClick={() => handleEditSong(index)}
                 >
-                  Modificar
+                  Edit
                 </Button>
                 <Button
                   variant="danger"
                   onClick={() => handleDeleteConfirmationShow(index)}
                 >
-                  Borrar
+                  Delete
                 </Button>
               </Card.Body>
             </Card>
@@ -205,37 +212,37 @@ function CoursList() {
         ))}
       </Row>
 
-      {/* bloque modal ventanas */}
-      {/* modal añadir */}
-      <AddModalCours
+      {/* блок модальных окон */}
+      {/* окно добавления */}
+      <AddModalSong
         show={showAddModal}
         onHide={handleAddModalClose}
-        onSubmit={handleAddCourse}
-        newCourse={newCourse}
-        setNewCourse={setNewCourse}
+        onSubmit={handleAddSong}
+        newSong={newSong}
+        setNewSong={setNewSong}
       />
 
-      {/* modal modificar */}
-      <EditModalCours
+      {/* окно изменения */}
+      <EditModalSong
         show={showEditModal}
         onHide={handleEditModalClose}
-        onSubmit={handleSaveEditedCourse}
-        editCourseIndex={editCourseIndex}
-        editedCourse={editedCourse}
-        setEditedCourse={setEditedCourse}
+        onSubmit={handleSaveEditedSong}
+        editSongIndex={editSongIndex}
+        editedSong={editedSong}
+        setEditedSong={setEditedSong}
       />
 
-      {/* modal eliminar courses*/}
-      <DeleteModalCours
+      {/* окно удаления*/}
+      <DeleteModalSong
         show={showDeleteConfirmation}
         onHide={handleDeleteConfirmationClose}
-        onConfirm={handleDeleteCourseConfirmed}
+        onConfirm={handleDeleteSongConfirmed}
       />
       <TablaUsers />
-      <TablaAdvan />
+      <TablaLists />
       <TopButton />
     </Container>
   );
 }
 
-export default CoursList;
+export default SongsList;

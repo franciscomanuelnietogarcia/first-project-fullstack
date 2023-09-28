@@ -3,13 +3,11 @@ import { useLocation } from 'react-router-dom';
 import {  MDBCol,  MDBContainer,  MDBRow,  MDBCard,  MDBCardText,  MDBCardBody,  MDBCardImage,  MDBBtn,
   MDBProgress,  MDBProgressBar} from 'mdb-react-ui-kit';
 import Header from '../Header/Header';
-import Cart from '../Cart/Cart';
 
 const ProfilePage = () => {
   const location = useLocation();
   const user = location.state?.user;
-  const [cart, setCart] = useState([]); // estado del carrito
-  console.log(cart);
+
 
   return (
     <section style={{ backgroundColor: '#eee' }}>
@@ -26,7 +24,6 @@ const ProfilePage = () => {
                   style={{ width: '150px' }}
                   fluid />
                 <p className="text-muted mb-1">Full Stack Developer</p>
-                <p className="text-muted mb-4">Bay Area, San Francisco, CA</p>
                 <div className="d-flex justify-content-center mb-2">
                   <MDBBtn>Cambiar foto</MDBBtn>
                   <MDBBtn outline className="ms-1">Modificar datos</MDBBtn>
@@ -89,8 +86,6 @@ const ProfilePage = () => {
             </MDBRow>
           </MDBCol>
         </MDBRow>     
-            {/* Отображение содержимого корзины с передачей cart */}
-        <Cart cartItems={cart} />
       </MDBContainer>
     </section>
   );
